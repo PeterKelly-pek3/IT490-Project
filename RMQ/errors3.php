@@ -17,7 +17,7 @@ $file = file_get_contents("/home/pk/git/rabbitmqphp_example/RMQ/Logs/errLog.txt"
 $errArray = [];
 
 $request = array();
-$request['type'] = "rmq";
+$request['type'] = "db";
 $request['error_string'] = $file;
 
 $returnedValue = createRMQClient3($request);
