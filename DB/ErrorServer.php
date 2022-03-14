@@ -56,7 +56,7 @@ function requestProcessor($request)
 }
 
 //Create RabbitMQServer
-$server = new rabbitMQServer('ErrorRabbitMQ3.ini', 'testServer');
+$server = new rabbitMQServer('ErrorRabbitMQ4.ini', 'testServer');
 
 echo "Database Error Server BEGIN\n";
 $server->process_requests('requestProcessor');

@@ -101,6 +101,16 @@ function register($username, $email, $password, $firstname, $lastname)
         return true;
 }
 
-// Contact DMZ Functions
+// Contact DMZ Server
+function getAPIConnection()
+{
+	$request = array();
 
+	$request['type'] = "GetAPI";
+
+	$returnedValue = createDMZClient($request);
+
+	return $returnedValue;
+
+}
 ?>

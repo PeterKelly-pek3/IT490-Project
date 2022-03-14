@@ -15,7 +15,7 @@ function dbConnection()
 	$hostname  = "127.0.0.1";
 	$username  = "peter";
 	$password  = "Password12345$";
-	$dbname    = "Gambling_DB";
+	$dbname    = "pktestdb";
 
 	$conn = mysqli_connect($hostname, $username, $password, $dbname);
 

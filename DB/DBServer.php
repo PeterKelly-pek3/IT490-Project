@@ -29,33 +29,40 @@ function requestProcessor($request)
 	{
             	// Login
             	case "Login":
-                	echo "<br>in login";
+                	echo "login";
                 	$response_msg = doLogin($request['username'],$request['password']);
                 	break;
 
             	// Check Username Taken
             	case "CheckUsername":
-                	echo "<br>in Checkusername";
+                	echo "Checkusername";
                 	$response_msg = checkUsername($request['username']);
                 	echo "Result: " . $response_msg;
                 	break;
 
             	// Check Email Taken
             	case "CheckEmail":
-                	echo "<br>in CheckEmail";
+                	echo "CheckEmail";
                 	$response_msg = checkEmail($request['email']);
                 	break;
 
             	// Registration
             	case "Register":
-                	echo "<br>in register";
+                	echo "register";
                 	$response_msg = register($request['username'], $request['email'], $request['password'], $request['firstname'], $request['lastname']);
                 	break;
 
             	// User Profile
             	case "UserProfile":
+			echo "profile";
                 	$response_msg = userProfile($request['username']);
                 	break;
+
+		// Test API Connection
+		case "TestAPI":
+			echo "testapi";
+			$response_msg = getAPIConnection();
+			break;
 	}
         echo $response_msg;
         return $response_msg;
