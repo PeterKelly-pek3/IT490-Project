@@ -2,15 +2,14 @@
 
 session_start();
 
-// Unset all of the session variables
+// Destroy session
 $_SESSION = array();
 
-// Destroy the session.
 session_destroy();
 
-// Redirect to login page
-header("location: login.php");
+// Redirect to loginRegister
+header("Location: /loginRegister.html");
 
-exit;
+exit();
 ?>
 
