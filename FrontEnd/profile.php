@@ -1,6 +1,7 @@
 <?php
 
 include('webClient.php');
+include('webFunctions.php');
 //include('errors.php');
 
 
@@ -23,9 +24,11 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 			<h3>Test API Connection</h3>
 			<div class="input-group">
 
-  	        		<button type="submit" class="btn" name="test_api">Test API</button>
+  	        		<button type="submit" class="btn4" name="test_api">Test API</button>
   			</div>
   			<p><a href="logout.php?logout='1'" style="color: red;">Logout</a></p>
 		</form>
+	<script type="text/javascript" src="webScripts.js">
+	</script>
 	</body>
 </html>

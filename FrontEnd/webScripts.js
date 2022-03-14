@@ -11,22 +11,6 @@ function checkLoginCredentials()
 	{
         	sendLoginCredentials(loginUsername, loginPassword);
     	}
-	else
-	{
-        	if(loginUsername == "")
-		{
-            		turnFieldToRedColorBorder(loginUsername);
-        	}
-        	if(loginPassword == "")
-		{
-            		turnFieldToRedColorBorder(loginPassword);
-        	}
-        	if (loginUsername == "" && loginPassword == "")
-		{
-            		turnFieldToRedColorBorder(loginUsername);
-            		turnFieldToRedColorBorder(loginPassword);
-        	}
-    	}
 }
 
 // AJAX Login Function
@@ -138,7 +122,7 @@ function checkForExistingUsername()
     	httpReq.send(null);
 }
 
-// AJAC Function to Check if Email Already Exists
+// Function to Check if Email Already Exists
 function checkForExistingEmail()
 {
     	var emailInput = document.getElementById("id_email").value;
@@ -211,4 +195,11 @@ function getUserName()
     	httpReq.send(null);
 
 	return returnValue;
+}
+
+// Test API Connection Button ***Obsolete***
+function testAPI()
+{
+	httpReq.open("GET", "webCases.php?type=TestAPI");
+        httpReq.send(null);
 }
