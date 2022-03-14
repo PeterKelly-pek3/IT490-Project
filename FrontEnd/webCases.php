@@ -54,9 +54,12 @@ $type = $_GET["type"];
             		$response = emailVerification($email);
             		echo $response;
             		break;
+		case "TestAPI":
+			$response = testAPIConnection();
+			echo $response;
+			break;
 
         	default:
-            		return "No message supported.";
+            		return "Message Type Not Supported";
 	}
-
 ?>

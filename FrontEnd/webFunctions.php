@@ -83,4 +83,15 @@ function emailVerification($email)
         return $returnedValue;
 }
 
+// RabbitMQ to Test API through Database and DMZ
+if (isset($_POST['test_api']))
+{
+	$request = array();
+
+	$request['type'] = "TestAPI";
+
+	$returnedValue = createClientForDb($request);
+
+	return $returnedValue;
+}
 ?>

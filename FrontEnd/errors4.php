@@ -17,7 +17,7 @@ $file = file_get_contents("/home/testserver/git/rabbitmqphp_example/FrontEnd/Log
 $errArray = [];
 
 $request = array();
-$request['type'] = "rmq";
+$request['type'] = "dmz";
 $request['error_string'] = $file;
 
 $returnedValue = createRMQClient4($request);
