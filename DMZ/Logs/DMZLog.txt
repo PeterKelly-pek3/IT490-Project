@@ -1,0 +1,38 @@
+This error is from DMZ DMZLog.txt
+
+This error is from DMZ errLog.txt
+
+[13-Mar-2022 13:53:59 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 13:56:07 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:00:35 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+This error is from DMZ errLog.txt
+
+[13-Mar-2022 13:53:59 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 13:56:07 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:00:35 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+This error is from DMZ errLog.txt
+
+[13-Mar-2022 13:53:59 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 13:56:07 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:00:35 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:59:43 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+This error is from DMZ errLog.txt
+
+[13-Mar-2022 13:53:59 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 13:56:07 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:00:35 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:59:43 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+This error is from DMZ errLog.txt
+
+[13-Mar-2022 13:53:59 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 13:56:07 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:00:35 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:59:43 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 15:07:28 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+This error is from DMZ errLog.txt
+
+[13-Mar-2022 13:53:59 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 13:56:07 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:00:35 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 14:59:43 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
+[13-Mar-2022 15:07:28 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /home/dmz/git/rabbitmqphp_example/DMZ/rabbitMQLib.inc on line 215
