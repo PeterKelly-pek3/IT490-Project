@@ -31,7 +31,7 @@ $returnedValue = createRMQClient($request);
 
 function createRMQClient($request)
 {
-        $client = new rabbitMQClient('ErrorRabbitMQ3.ini','testServer');
+        $client = new rabbitMQClient('ErrorRabbitMQ.ini','testServer');
 
         if(isset($argv[1]))
         {

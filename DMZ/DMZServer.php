@@ -10,7 +10,7 @@ require_once('DMZFunctions.php');
 // DMZ Server to Function
 function requestProcessor($request){
         echo "received request".PHP_EOL;
-        echo $request['type'];
+        //echo $request['type'];
 
         var_dump($request);
 
@@ -21,8 +21,8 @@ function requestProcessor($request){
         switch($request['type'])
 	{
             	// TEST API
-            	case "TestAPI":
-                	$response_msg = someFunction($request['testapi']);
+            	case "GetAPI":
+                	$response_msg = someFunction();
                 	break;
         }
        	echo var_dump($response_msg);
