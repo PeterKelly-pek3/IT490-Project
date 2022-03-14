@@ -1,23 +1,21 @@
-// This file is used to establish a connection with the database
-
 <?php
 
 //include('errors.php');
 
-//Error Reporting
+// Error Reporting
 error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
-ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/errLog.txt');
+ini_set('error_log', '/home/db/git/rabbitmqphp_example/DB/Logs/errLog.txt');
 
-//Connect to MySQL
-function dbConnect()
+// Connect to Database
+function dbConnection()
 {
-	//Enter local database information
+	// Server and User Information
 	$hostname  = "127.0.0.1";
 	$username  = "peter";
 	$password  = "Password12345$";
-	$dbname    = "Gambling_DB";
+	$dbname    = "pktestdb";
 
 	$conn = mysqli_connect($hostname, $username, $password, $dbname);
 

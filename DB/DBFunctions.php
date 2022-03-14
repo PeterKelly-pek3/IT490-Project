@@ -4,61 +4,103 @@ require_once('path.inc');
 require_once('get_host_info.inc');
 require_once('rabbitMQLib.inc');
 require_once('DBConnect.php');
+require_once('DMZClient.php');
 
 //include('errors.php');
 
-//Error Reporting
+// Error Reporting
 error_reporting(E_ALL);
 ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
 ini_set('error_log', '/home/db/git/rabbitmqphp_example/DB/Logs/errLog.txt');
 
 //Login Function
-function doLogin($username,$password)
+function doLogin($username, $password)
 {
-	$connection = dbConnect();
-    	$ENCpassword = sha1($password);
+	$connection = dbConnection();
 
-	$query = "SELECT * FROM `Users` WHERE username='$username' AND password='$ENCpassword'";
-	$result = $connection->query($query);
+        $query = "SELECT * FROM Users WHERE username = '$username'";
+        $result = $connection->query($query);
 
-	if ($result->num_rows == 1)
-    	{
-      		echo "\n\n\t***Login successful***\n\n";
-    	}
-    	else
+	if($result)
 	{
-      		echo "\n\t***Wrong username/password combination***\n\n";
-      		return false;
-   	}
+            	if($result->num_rows == 0)
+		{
+                	return false;
+            	}
+		else
+		{
+                	while ($row = $result->fetch_assoc())
+			{
+                    		$h_password = sha1($password);
+                    		if ($row['h_password'] == $h_password)
+				{
+                        		return true;
+                    		}
+				else
+				{
+                        		return false;
+                    		}
+                	}
+            	}
+        }
 }
 
-//Registration Function
-function doRegister($username, $email, $password_1, $password_2)
+// Query Function to Check if Username is Taken
+function checkUsername($username)
 {
-	$connection = dbConnect();
-	$ENCpassword_1 = sha1($password_1);
+        $connection = dbConnection();
 
-	$query = "SELECT * FROM `Users` WHERE username='$username'";
-	$result = $connection->query($query);
+        $check_username = "SELECT * FROM Users WHERE username = '$username'";
+        $check_result = $connection->query($check_username);
 
-	if ($result->num_rows == 1)
-    	{
-      		echo "\n\n\t***Username already exists.***\n\n";
-      		return false;
-    	}
-
-	$insert_query = "INSERT INTO `Users` (username, email, password, plainPass) VALUES('$username', '$email', '$ENCpassword_1', '$password_2')";
-
-    	if ($connection->query($insert_query) === TRUE)
+        if($check_result)
 	{
-        	echo "\n\n\t***New record created successfully***\n\n";
-    	}
-    	else
-	{
-        	echo "Error: " . $insert_query . "<br>" . $connection->error;
-		return false;
-    	}
-    	return true;
+            	if($check_result->num_rows == 0)
+		{
+                	return true;
+            	}
+		elseif($check_result->num_rows == 1)
+		{
+                	return false;
+                }
+        }
 }
+
+// Query Function to Check if Email is Taken
+function checkEmail($email)
+{
+        $connection = dbConnection();
+
+        $check_email = "SELECT * FROM Users WHERE email = '$email'";
+        $check_result = $connection->query($check_email);
+
+        if($check_result)
+	{
+            	if($check_result->num_rows == 0)
+		{
+                	return true;
+            	}
+		elseif($check_result->num_rows == 1)
+		{
+                	return false;
+                }
+        }
+}
+
+// Query Function to Register New User
+function register($username, $email, $password, $firstname, $lastname)
+{
+        $connection = dbConnection();
+
+        $h_password = sha1($password);
+
+        $newuser_query = "INSERT INTO Users VALUES ('$username', '$email', '$h_password', '$firstname', '$lastname')";
+        $result = $connection->query($newuser_query);
+
+        return true;
+}
+
+// Contact DMZ Functions
+
 ?>
