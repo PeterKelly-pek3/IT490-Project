@@ -208,13 +208,16 @@ function getHistStats()
 }
 
 // Create User Groups
-function createUserGroups($groupname, $groupkey)
+
+function groupsubmit($groupname, $groupkey)
 {
-	$request = array();
 
-        $request['type'] = "CreateGroup";
+    $connection = dbConnection();
+    $newgroup_query = "INSERT INTO Groups VALUES ('$groupname', '$groupkey')";
+    $result = $connection->query($newgroup_query);
+    return true;
 
-	echo "Creating User Group";
+
 }
 
 // Join Group
