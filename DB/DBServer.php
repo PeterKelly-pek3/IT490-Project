@@ -63,6 +63,12 @@ function requestProcessor($request)
 			echo "TestAPI\n";
 			$response_msg = getAPIConnection();
 			break;
+			
+		//Create new user group
+		case "groupsubmit":
+    			echo "groupsubmit\n";
+   	 		$response_msg = groupsubmit($request['groupname'], $request['groupkey']);
+    			break;
 	}
 	return $response_msg;
 }
