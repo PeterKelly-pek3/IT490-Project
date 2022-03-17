@@ -29,43 +29,42 @@ function requestProcessor($request)
 	{
             	// Login
             	case "Login":
-                	echo "login";
+                	echo "Login\n";
                 	$response_msg = doLogin($request['username'],$request['password']);
                 	break;
 
             	// Check Username Taken
             	case "CheckUsername":
-                	echo "Checkusername";
+                	echo "Checkusername\n";
                 	$response_msg = checkUsername($request['username']);
                 	echo "Result: " . $response_msg;
                 	break;
 
             	// Check Email Taken
             	case "CheckEmail":
-                	echo "CheckEmail";
+                	echo "CheckEmail\n";
                 	$response_msg = checkEmail($request['email']);
                 	break;
 
             	// Registration
             	case "Register":
-                	echo "register";
+                	echo "Register\n";
                 	$response_msg = register($request['username'], $request['email'], $request['password'], $request['firstname'], $request['lastname']);
                 	break;
 
             	// User Profile
             	case "UserProfile":
-			echo "profile";
+			echo "Profile\n";
                 	$response_msg = userProfile($request['username']);
                 	break;
 
 		// Test API Connection
 		case "TestAPI":
-			echo "testapi";
+			echo "TestAPI\n";
 			$response_msg = getAPIConnection();
 			break;
 	}
-        echo $response_msg;
-        return $response_msg;
+	return $response_msg;
 }
 
 // Create RabbitMQ Database Server

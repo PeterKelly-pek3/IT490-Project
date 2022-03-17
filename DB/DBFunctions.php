@@ -101,16 +101,133 @@ function register($username, $email, $password, $firstname, $lastname)
         return true;
 }
 
-// Contact DMZ Server
+// Contact DMZ Server for API Test
 function getAPIConnection()
 {
+
 	$request = array();
 
 	$request['type'] = "GetAPI";
 
 	$returnedValue = createDMZClient($request);
+	var_dump($returnedValue);
 
-	return $returnedValue;
+	echo "Back from DMZ\n";
+	//return $returnedValue;
+	$connection = dbConnection();
+	echo "DB Connection est.\n";
+
+ 	foreach($returnedValue['results'] as &$value)
+	{
+        	$LOL = $value['league']['name'];
+        	$word = "LOL";
+        	if(strpos($LOL, $word) !== false)
+		{
+            	//	echo "\n";
+            	//	echo "League Name: ".$LOL"\n";
+	    		$leaguename = $LOL;
+            	//	echo "Home Team: ".$value['home']['name']"\n";
+	    		$hometeam = $value['home']['name'];
+            	//	echo "Away Team: ".$value['away']['name']"\n";
+	    		$awayteam = $value['away']['name'];
+            		$epoch = $value['time'];
+            		$dt = new DateTime("@$epoch");
+            	//	echo $dt->format('Y-m-d H:i:s')"\n";
+	    		$eventdate = $dt->format('Y-m-d H:i:s');
+            	//	echo "Event ID: ".$value['id']"\n";
+	    		$eventID = $value['id'];
+            	//	echo "\n";
+
+	   		$query = "INSERT INTO LeagueData VALUES ('$leaguename','$hometeam', '$awayteam', '$eventdate', '$eventID')";
+	   		$result = $connection->query($query);
+        	}
+	}
+
+	echo "Finished API Database Insert Query.\n";
+	return false;
+}
+
+// Contact DMZ Server for Historical Statistics
+function getHistStats()
+{
+
+        $request = array();
+
+        $request['type'] = "GetHistoricalStats";
+
+        $returnedValue = createDMZClient($request);
+        var_dump($returnedValue);
+
+        echo "Back from DMZ\n";
+        //return $returnedValue;
+        $connection = dbConnection();
+        echo "DB Connection est.\n";
+
+	foreach($returnedValue as $value)
+	{
+        	foreach($value as $data)
+		{
+//            		echo "\n";
+            		$Name = $data['Name'];
+//            		echo "Name: ".$Name;
+//            		echo "\n";
+            		$Season = $data['Season'];
+//            		echo "Season: ".$Season;
+//            		echo "\n";
+			$url = $data['url'];
+//			echo "url: ".$url;
+//			echo "\n";
+            		$Region = $data['Region'];
+//            		echo "Region: ".$Region;
+//            		echo "\n";
+            		$Games = $data['Games'];
+//            		echo "Name: ".$Games;
+//            		echo "\n";
+            		$Win_rate = $data['Win_rate'];
+			$dropDollar = rtrim($Win_rate, "$");
+			$trimWin_rate = number_format($dropDollar, 2);
+//            		echo "Win Rate: ".$Win_rate;
+//            		echo "\n";
+            		$KD = $data['KD'];
+//            		echo "KD: ".$KD;
+//            		echo "\n";
+            		$GPM = $data['GPM'];
+//            		echo "GPM: ".$GPM;
+//            		echo "\n";
+            		$GDM = $data['GDM'];
+//            		echo "GDM: ".$GDM;
+//            		echo "\n";
+
+                        $query = "INSERT INTO HistoricalData (Name, Season, url, Region, Games, trimWin_rate, KD, GPM, GDM) VALUES ('$Name','$Season', '$url', '$Region', '$Games', '$trimWin_rate', '$KD', '$GPM', '$GDM')";
+                        $result = $connection->query($query);
+                }
+        }
+
+        echo "Finished API Database Historical Data Insert Query.\n";
+	return false;
+}
+
+// Create User Groups
+function createUserGroups($groupname, $groupkey)
+{
+	$request = array();
+
+        $request['type'] = "CreateGroup";
+
+	echo "Creating User Group";
+}
+
+// Join Group
+function joinGroup()
+{
+
+        $request = array();
+
+        $request['type'] = "JoinGroup";
+
+        echo "Creating User Group";
 
 }
+
 ?>
+

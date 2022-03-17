@@ -12,7 +12,7 @@ ini_set('display_errors', 'On');
 ini_set('log_errors', 'On');
 ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/DB/Logs/errLog.txt');
 
-function createDMZClient()
+function createDMZClient($request)
 {
 	$client = new rabbitMQClient("DMZRabbitMQ.ini","testServer");
 
