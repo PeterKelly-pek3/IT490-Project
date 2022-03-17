@@ -90,8 +90,21 @@ if (isset($_POST['test_api']))
 
 	$request['type'] = "TestAPI";
 
-	$returnedValue = createClientForDb($request);
+	$returnedValue = createClientForDb();
 
 	return $returnedValue;
 }
+
+// Create User Groups
+if (isset($_POST['create_group']))
+{
+	$request = array();
+
+	$request['type] = "CreateGroup";
+
+	$returnedValue = createClientForDb($request);
+
+
+}
+
 ?>

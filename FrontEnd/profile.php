@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include('webClient.php');
 include('webFunctions.php');
 //include('errors.php');
@@ -21,13 +23,22 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 	<body>
 		<h2>Create Your User Profile</h2>
 		<form method="post" action="profile.php">
-			<h3>Test API Connection</h3>
+			<h3>User Profile</h3>
 			<div class="input-group">
 
-  	        		<button type="submit" class="btn4" name="test_api">Test API</button>
+  	        		<button type="submit" class="btn4" name="create_profile">Do NOT Click</button>
   			</div>
   			<p><a href="logout.php?logout='1'" style="color: red;">Logout</a></p>
 		</form>
+
+		<form method="get" action="Esports_Chat/index.html">
+                        <h3>Global & Team Chat</h3>
+                        <div class="input-group">
+
+                                <button type="submit" class="btn4" name="chat">Chat</button>
+                        </div>
+                        <p><a href="logout.php?logout='1'" style="color: red;">Logout>
+                </form>
 	<script type="text/javascript" src="webScripts.js">
 	</script>
 	</body>
