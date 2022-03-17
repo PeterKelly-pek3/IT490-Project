@@ -39,6 +39,30 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
                         </div>
                         <p><a href="logout.php?logout='1'" style="color: red;">Logout>
                 </form>
+				
+		<h4>Create Group</h4>
+			<form action="webFunctions.php" method="post">
+    			<label for="groupname">Enter Group Name:</label><br />
+    			<input id="groupname" name="groupname" type="text" value="" /><br />
+    			<label for="groupkey">Create Group Key:</label><br />
+    			<input id="groupkey" name="groupkey" type="text" value="" /><br /><br />
+    			<button type="submit" name="groupsubmit">Create Group</button>
+		</form>
+
+		<form action="webFunctions.php" method="post">
+    			<h5>Join Group</h5>
+   			<p><label for="group">Choose Group:</label></p>
+
+    			<select id="group" name="group">
+        		<option value="group1">Group1</option>
+        		<option value="group2">Group2</option>
+    			</select>
+    			<br />
+    			<label for="gkey">Enter Group Key:</label><br />
+    			<input id="gkey" name="gkey" type="text" value="" />
+    			<p><button type="submit" name="groupjoin">Join Group</button></p>
+		</form>
+			
 	<script type="text/javascript" src="webScripts.js">
 	</script>
 	</body>
