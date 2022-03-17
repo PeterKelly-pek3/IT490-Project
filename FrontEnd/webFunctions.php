@@ -96,14 +96,18 @@ if (isset($_POST['test_api']))
 }
 
 // Create User Groups
-if (isset($_POST['create_group']))
+if (isset($_POST['groupsubmit']))
 {
-	$request = array();
+    $request = array();
 
-	$request['type] = "CreateGroup";
+    $request['type'] = "groupsubmit";
+    $request['groupname'] = $groupname;
+    $request['groupkey'] = $groupkey;
+
 
 	$returnedValue = createClientForDb($request);
 
+    return $returnedValue;
 
 }
 
