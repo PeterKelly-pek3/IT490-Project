@@ -24,9 +24,15 @@ function requestProcessor($request){
             	case "GetAPI":
                 	$response_msg = someFunction();
                 	break;
+
+		// GET HISTORICAL STATISTICS
+		case "GetHistoricalStats":
+			$response_msg = getHistorical();
+			break;
         }
-       	echo var_dump($response_msg);
+       	//echo var_dump($response_msg);
         return $response_msg;
+	exit();
     }
 
 // Create RabbitMQ DMZ Server

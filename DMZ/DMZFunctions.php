@@ -16,22 +16,18 @@ ini_set('error_log', '/home/dmz/git/rabbitmqphp_example/DMZ/Logs/errLog.txt');
 function someFunction()
 {
 
-
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-	CURLOPT_URL => "https://alpha-vantage.p.rapidapi.com/query?interval=5min&function=TIME_SERIES_INTRADAY&symbol=MSFT&datatype=json&output_size=compact",
-	CURLOPT_RETURNTRANSFER => true,
-	CURLOPT_FOLLOWLOCATION => true,
-	CURLOPT_ENCODING => "",
-	CURLOPT_MAXREDIRS => 10,
-	CURLOPT_TIMEOUT => 30,
-	CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-	CURLOPT_CUSTOMREQUEST => "GET",
-	CURLOPT_HTTPHEADER => [
-		"x-rapidapi-host: alpha-vantage.p.rapidapi.com",
-		"x-rapidapi-key: 71b62f0c10msh7b55f7ddd1031d5p1f636ejsn76a16d72bcee"
-	],
+    CURLOPT_URL => "https://api.b365api.com/v3/events/upcoming?sport_id=151&token=115215-MDpRLi6nUUlglr",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+
 ]);
 
 $response = curl_exec($curl);
@@ -39,12 +35,50 @@ $err = curl_error($curl);
 
 curl_close($curl);
 
-if ($err) {
-	echo "cURL Error #:" . $err;
-} else {
-	echo $response;
+if ($err)
+{
+    	echo "cURL Error #:" . $err;
+}
+else
+{
+    	$data = json_decode($response, true);
+	$sendData = $data;
+	return $sendData;
+
 }
 }
 
+// Get historical data function
+function getHistorical()
+{
+$curl = curl_init();
+
+curl_setopt_array($curl, [
+    CURLOPT_URL => "https://www.parsehub.com/api/v2/runs/tVTojL79cxRB/data?api_key=tcsVdAnoG3uW&format=json",
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_FOLLOWLOCATION => true,
+    CURLOPT_ENCODING => "",
+    CURLOPT_MAXREDIRS => 10,
+    CURLOPT_TIMEOUT => 30,
+    CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+    CURLOPT_CUSTOMREQUEST => "GET",
+
+]);
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err)
+{
+    	echo "cURL Error #:" . $err;
+}
+else
+{
+    	$data = json_decode($response, true);
+	$sendData = $data;
+        return $sendData;
+}
+}
 ?>
-
