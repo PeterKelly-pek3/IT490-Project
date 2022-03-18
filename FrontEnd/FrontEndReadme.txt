@@ -12,3 +12,28 @@ A virtual host file needs to be created/edited
 /etc/apache2/sites-enabled:
 
     A symbolic link will need to be created to make the site available. The configuration file needs to be created/edited to point to loginRegister.html
+    
+    MAIN FILES:
+        - loginRegister.html - Home page, contains user login/authentication and registration features.
+        - profile.php - User profile page upon successful login.
+        - logout.php - User logout, redirects to loginRegister.html.
+        - webClient.php - Establish connection to database.
+        - webCases.php - WebServer Message Types.
+        - webFunctions.php - Sends Messages to the Database.
+        - webScripts.js - Javascript/AJAX functions for login/authentication and registration.
+        - webRabbitMQ.ini - RabbitMQ ini file to connect to database exchange.
+        - rmqClient.php - Establish connection to DMZ.
+        - DMZRabbitMQ.ini - RabbitMQ ini file to connect to dmz exchange.
+        
+    CHAT FILES:
+        - Esports_Chat: all files for team and global chat.
+        - utils: all files for team and global chat.
+        - server.js - Create server for team and global chat.
+        - package.json
+        - package-lock.json
+        
+    EVENT/ERROR LOGGING:
+        - ErrorServer.php - Listens for errors from other VM's.
+        - errors.php - Sends local errors to other VM's.
+    
+        
