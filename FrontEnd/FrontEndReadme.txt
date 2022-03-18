@@ -35,5 +35,5 @@ A virtual host file needs to be created/edited
     EVENT/ERROR LOGGING:
         - ErrorServer.php - Listens for errors from other VM's.
         - errors.php - Sends local errors to other VM's.
-    
+        - ErrorRabbitMQ.ini - RabbitMQ ini file to connect to error exchange. (ErrorRabbitMQ2..3..4: local testing).
         
