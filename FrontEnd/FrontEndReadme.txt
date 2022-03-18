@@ -11,4 +11,4 @@ A virtual host file needs to be created/edited
 /etc/apache2/sites-available: 
 /etc/apache2/sites-enabled:
 
-    A symbolic link will need to be created to make the site available. The configuration file needs to be created/edited to point to login.php
+    A symbolic link will need to be created to make the site available. The configuration file needs to be created/edited to point to loginRegister.html
