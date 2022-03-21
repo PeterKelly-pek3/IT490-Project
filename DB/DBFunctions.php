@@ -221,14 +221,15 @@ function groupsubmit($groupname, $groupkey)
 }
 
 // Join Group
-function joinGroup()
-{
+function groupjoin($group, $gkey){
 
-        $request = array();
+    $connection = dbConnection();
+    $_SESSION["username"] = $username;
 
-        $request['type'] = "JoinGroup";
+    $joingroup_query = "INSERT INTO Groups (Member1) VALUES ('$username') WHERE Group = $group AND Key = $gkey";
+    $result = $connection->query($joingroup_query);
+    return true;
 
-        echo "Creating User Group";
 
 }
 
