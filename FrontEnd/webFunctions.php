@@ -114,6 +114,7 @@ if (isset($_POST['groupjoin']))
     $request['type'] = "groupjoin";
     $request['group'] = $group;
     $request['gkey'] = $gkey;
+    $_SESSION["username"] = $username;
 
 
     $returnedValue = createClientForDb($request);
