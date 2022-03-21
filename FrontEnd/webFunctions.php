@@ -106,5 +106,19 @@ if (isset($_POST['create_group']))
 
 
 }
+// Join User Groups
+if (isset($_POST['groupjoin']))
+{
+    $request = array();
+
+    $request['type'] = "groupjoin";
+    $request['group'] = $group;
+    $request['gkey'] = $gkey;
+
+
+    $returnedValue = createClientForDb($request);
+
+    return $returnedValue;
+}
 
 ?>
