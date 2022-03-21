@@ -69,6 +69,12 @@ function requestProcessor($request)
     			echo "groupsubmit\n";
    	 		$response_msg = groupsubmit($request['groupname'], $request['groupkey']);
     			break;
+			
+		//Join user group
+		case "groupjoin":
+    			echo "groupjoin\n";
+   		 	$response_msg = groupjoin($request['group'], $request['gkey']);
+    			break;
 	}
 	return $response_msg;
 }
