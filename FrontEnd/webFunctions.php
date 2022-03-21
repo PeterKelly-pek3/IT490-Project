@@ -101,9 +101,15 @@ if (isset($_POST['create_group']))
 	$request = array();
 
 	$request['type'] = "CreateGroup";
+	$groupname = $_REQUEST['groupname'];
+	$request['groupname'] = $groupname;
+	$groupkey = $_REQUEST['groupkey'];
+	$request['groupkey'] = "groupkey";
+	
 
 	$returnedValue = createClientForDb($request);
 
+	return $returnedValue;
 
 }
 // Join User Groups
@@ -112,9 +118,12 @@ if (isset($_POST['groupjoin']))
     $request = array();
 
     $request['type'] = "groupjoin";
+    $group = $_REQUEST['group'];
     $request['group'] = $group;
+    $gkey = $_REQUEST['gkey'];
     $request['gkey'] = $gkey;
     $_SESSION["username"] = $username;
+    $request['username'] = $username;
 
 
     $returnedValue = createClientForDb($request);
