@@ -1,7 +1,7 @@
 # IT490-Project
-Systems Integration Group Project
+**Systems Integration Group Project**
 
-League of Legends Fantasy Gambling League
+**League of Legends Fantasy Gambling League**
 
 Garret Brophy
 Daniel Constancia
