@@ -73,7 +73,7 @@ function requestProcessor($request)
 		//Join user group
 		case "groupjoin":
     			echo "groupjoin\n";
-   		 	$response_msg = groupjoin($request['group'], $request['gkey']);
+   		 	$response_msg = groupjoin($request['group'], $request['gkey'], $request['username']);
     			break;
 	}
 	return $response_msg;
