@@ -221,10 +221,9 @@ function groupsubmit($groupname, $groupkey)
 }
 
 // Join Group
-function groupjoin($group, $gkey){
+function groupjoin($group, $gkey, $username){
 
     $connection = dbConnection();
-    $_SESSION["username"] = $username;
 
     $joingroup_query = "INSERT INTO Groups (Member1) VALUES ('$username') WHERE Group = $group AND Key = $gkey";
     $result = $connection->query($joingroup_query);
