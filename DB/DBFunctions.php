@@ -225,9 +225,18 @@ function groupjoin($group, $gkey, $username){
 
     $connection = dbConnection();
 
-    $joingroup_query = "INSERT INTO Groups (Member1) VALUES ('$username') WHERE Group = $group AND Key = $gkey";
-    $result = $connection->query($joingroup_query);
-    return true;
+    for ($x = 1; $x <= 10; $x++) {
+	$check_spot_query = "SELECT 'Player'.$x FROM Groups;";
+	$result = $connection->query($check_spot_query);   
+		if (is_null($result)) {
+  			$joingroup_query = "INSERT INTO Groups Player.$x VALUES ('$username') WHERE Group = $group AND Key = $gkey";
+			$result = $connection->query($joingroup_query);
+			return true;
+		}
+	    	else {
+			return false;	
+  		
+    		}
 
 
 }
