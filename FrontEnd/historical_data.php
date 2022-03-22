@@ -78,7 +78,7 @@ foreach($array as $value) {
         $Games = $data['Games'];
         echo "Name: ".$Games;
         echo "<br>";
-        $Win_rate = $data['Win_rate'];
+        $Win_rate = $data['trimWin_rate'];
         echo "Win Rate: ".$Win_rate;
         echo "<br>";
         $KD = $data['KD'];
