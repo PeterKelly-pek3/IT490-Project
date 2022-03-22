@@ -26,32 +26,32 @@ function requestProcessor($request)
 	{
            	case "rmq":
                 	echo "RMQ Errors: ";
-                	$response_msg = file_put_contents('Logs/RMQLog.txt',$request['error_string'], FILE_APPEND);
-                	$dist_msg = file_get_contents('Logs/RMQLog.txt');
+                	$response_msg = file_put_contents('Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
+                	//$dist_msg = file_get_contents('Logs/RMQLog.txt');
                 	break;
 
             	case "frontend":
                 	echo "Frontend Errors: ";
-                	$response_msg = file_put_contents('Logs/FrontEndLog.txt',$request['error_string'], FILE_APPEND);
-			$dist_msg = file_get_contents('Logs/FrontEndLog.txt');
+                	$response_msg = file_put_contents('Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
+			//$dist_msg = file_get_contents('Logs/FrontEndLog.txt');
                 	break;
 
             	case "dmz":
                 	echo "DMZ Errors: ";
-                	$response_msg = file_put_contents('Logs/DMZLog.txt',$request['error_string'], FILE_APPEND);
-                	$dist_msg = file_get_contents('Logs/DMZLog.txt');
+                	$response_msg = file_put_contents('Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
+                	//$dist_msg = file_get_contents('Logs/DMZLog.txt');
 			echo "Result: " . $response_msg;
                 	break;
 
             	case "db":
                 	echo "Database Errors: ";
-                	$response_msg = file_put_contents('Logs/DatabaseLog.txt',$request['error_string'], FILE_APPEND);
-			$dist_msg = file_get_contents('Logs/DatabaseLog.txt');
+                	$response_msg = file_put_contents('Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
+			//$dist_msg = file_get_contents('Logs/DatabaseLog.txt');
                 	echo "Result: " . $response_msg;
                 	break;
         }
         echo $response_msg;
-        return $dist_msg;
+        return $response_msg;
 }
 
 //Create RabbitMQServer
