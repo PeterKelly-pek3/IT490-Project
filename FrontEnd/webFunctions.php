@@ -137,7 +137,7 @@ function getHistoricalStats()
 
 	$request['type'] = "getHistoricalStats";
 
-	$returnedValue = createClientForDb();
+	$returnedValue = createClientForDb($request);
 
 	return $returnedValue;
 	
