@@ -238,7 +238,7 @@ function groupjoin($group, $gkey, $username){
   		
     		}
 
-
+    }
 }
 
 //get historical stats to display on frontend
