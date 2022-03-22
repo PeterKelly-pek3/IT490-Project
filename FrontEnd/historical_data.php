@@ -58,6 +58,7 @@ if ($_SESSION["logged"])
 {
     
     $stats = getHistoricalStats();
+    return $stats;
     echo var_dump($stats);
     
 }
