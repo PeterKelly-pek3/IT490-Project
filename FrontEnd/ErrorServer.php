@@ -27,26 +27,26 @@ function requestProcessor($request)
         {
            	case "rmq":
                 	echo "RMQ Errors: ";
-                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/RMQLog.txt',$request['error_string'], FILE_APPEND);
+                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
                 	//$dist_msg = file_get_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/RMQLog.txt');
                 	break;
 
             	case "frontend":
                 	echo "Frontend Errors: ";
-                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/FrontEndLog.txt',$request['error_string'], FILE_APPEND);
+                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
                 	//$dist_msg = file_get_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/FrontEndLog.txt');
                 	break;
 
             	case "dmz":
                 	echo "DMZ Errors: ";
-                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/DMZLog.txt',$request['error_string'], FILE_APPEND);
+                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
                 	//$dist_msg = file_get_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/DMZLog.txt');
                 	echo "Result: " . $response_msg;
                 	break;
 
             	case "db":
                 	echo "Database Errors: ";
-                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/DatabaseLog.txt',$request['error_string'], FILE_APPEND);
+                	$response_msg = file_put_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/eventLog.txt',$request['error_string'], FILE_APPEND);
                 	//$dist_msg = file_get_contents('/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/DatabaseLog.txt');
                 	echo "Result: " . $response_msg;
                 	break;
