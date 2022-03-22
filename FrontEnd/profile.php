@@ -74,6 +74,11 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
     			<p><button type="submit" name="groupjoin">Join Group</button></p>
 			</form>
 			
+		<h6>Get Historical Data Stats<h6>
+			<form action="historical_data.php">
+    				<input type="submit" value="Get Stats" />
+			</form>
+			
 	<script type="text/javascript" src="webScripts.js">
 	</script>
 
