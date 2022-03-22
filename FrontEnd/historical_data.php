@@ -55,13 +55,13 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
     </tr>
 <?php
 console.log("hello world");
-if ($_SESSION["logged"])
+if (isset($_POST['Get_Stats']))
 {
     $response = getHistoricalStats();
     return $response;
     console.log($response);
 }
-$array = json_decode( $response,true);
+$array = json_decode($response,true);
 console.log($array);
 foreach($array as $value) {
     foreach($value as $data) {
