@@ -56,10 +56,38 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 <?php
 if ($_SESSION["logged"])
 {
-    
-    $stats = getHistoricalStats();
-    return $stats;
-    echo var_dump($stats);
-    
+    $response = getHistoricalStats();
+    return $response;
+}
+$array = json_decode( $response,true);
+foreach($array as $value) {
+    foreach($value as $data) {
+        echo "<br>";
+        $Name = $data['Name'];
+        echo "Name: ".$Name;
+        echo "<br>";
+        $Season = $data['Season'];
+        echo "Season: ".$Season;
+        echo "<br>";
+        $Region = $data['Region'];
+        echo "Region: ".$Region;
+        echo "<br>";
+        $Games = $data['Games'];
+        echo "Name: ".$Games;
+        echo "<br>";
+        $Win_rate = $data['Win_rate'];
+        echo "Win Rate: ".$Win_rate;
+        echo "<br>";
+        $KD = $data['KD'];
+        echo "KD: ".$KD;
+        echo "<br>";
+        $GPM = $data['GPM'];
+        echo "GPM: ".$GPM;
+        echo "<br>";
+        $GDM = $data['GDM'];
+        echo "GDM: ".$GDM;
+        echo "<br>";
+    }
+
 }
 ?>
