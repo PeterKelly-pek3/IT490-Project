@@ -130,7 +130,7 @@ if (isset($_POST['groupjoin']))
 
     return $returnedValue;
 }
-
+//Get historical stats to display in front end
 function getHistoricalStats()
 {
 	$request = array();
