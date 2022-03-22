@@ -259,7 +259,7 @@ function getHistoricalStats(){
 			$GDM = $row["GDM"];
 			$all_info = array("Name"=>$name, "Region"=>$region, "twimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
 		}
-	$all_info = json_encode($all_info)
+	$all_info = json_encode($all_info);
 	echo "FUCK FUCK FUCK";
 	return $all_info;
 	} 
