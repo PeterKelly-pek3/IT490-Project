@@ -54,12 +54,15 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
         <th>GDM</th>
     </tr>
 <?php
+console.log("hello world");
 if ($_SESSION["logged"])
 {
     $response = getHistoricalStats();
     return $response;
+    console.log($response);
 }
 $array = json_decode( $response,true);
+console.log($array);
 foreach($array as $value) {
     foreach($value as $data) {
         echo "<br>";
