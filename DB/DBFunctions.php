@@ -245,7 +245,7 @@ function groupjoin($group, $gkey, $username){
 function getHistoricalStats(){
 	
 	$connection = dbConnection();
-	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM login";
+	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM HistoricalData";
 	$result = $conn->query($sql);
 	$all_info = [];
 	if ($result->num_rows > 0) {
