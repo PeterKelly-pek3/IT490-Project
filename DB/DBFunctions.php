@@ -250,7 +250,7 @@ function getHistoricalStats(){
 	$result = $conn->query($sql);
 	echo "SQL QUERY";
 	$all_info = [];
-	echo "Empty Array Created"
+	echo "Empty Array Created";
 	if ($result->num_rows > 0) {
 	// output data of each row
 		echo "IF STATEMENT STARTED";
