@@ -75,6 +75,12 @@ function requestProcessor($request)
     			echo "groupjoin\n";
    		 	$response_msg = groupjoin($request['group'], $request['gkey'], $request['username']);
     			break;
+			
+		//Get historical stats
+		case "getHistoricalStats":
+			echo "getHistoricalStats\n";
+			$response_msg = getHistoricalStats();
+			break;
 	}
 	return $response_msg;
 }
