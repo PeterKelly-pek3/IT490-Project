@@ -131,4 +131,16 @@ if (isset($_POST['groupjoin']))
     return $returnedValue;
 }
 
+function getHistoricalStats()
+{
+	$request = array();
+
+	$request['type'] = "getHistoricalStats";
+
+	$returnedValue = createClientForDb();
+
+	return $returnedValue;
+	
+}
+
 ?>
