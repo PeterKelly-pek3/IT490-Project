@@ -241,5 +241,27 @@ function groupjoin($group, $gkey, $username){
 
 }
 
+//get historical stats to display on frontend
+function getHistoricalStats(){
+	
+	$connection = dbConnection();
+	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM login";
+	$result = $conn->query($sql);
+	if ($result->num_rows > 0) {
+	// output data of each row
+		while($row = $result->fetch_assoc()) {
+			echo "<tr><td>" . $row["Name"]. "</td><td>" . $row["Region"] . "</td><td>"
+			. $row["trimWin_rate"]. "</td><td>" . $row["KD"] . "</td><td>" . $row["GPM"] . "</td><td>" . $row["GDM"] . "</td></tr>";
+		}
+	echo "</table>";
+	} 
+	
+	else { echo "0 results"; }
+	$conn->close();
+	
+	
+}
+	
+
 ?>
 
