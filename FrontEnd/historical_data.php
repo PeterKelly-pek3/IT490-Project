@@ -56,6 +56,7 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 <?php
 if ($_SESSION["logged"])
 {
-    getHistoricalStats();
+    echo var_dump(getHistoricalStats());
+    
 }
 ?>
