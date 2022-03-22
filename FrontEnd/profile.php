@@ -50,7 +50,7 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
                 </form>
 				
 		<h4>Create Group</h4>
-			<form action="webFunctions.php" method="post">
+			<form action="profile.php" method="post">
     			<label for="groupname">Enter Group Name:</label><br />
     			<input id="groupname" name="groupname" type="text" value="" /><br />
     			<label for="groupkey">Create Group Key:</label><br />
@@ -59,7 +59,7 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 			</form>
 
 		
-		<form action="webFunctions.php" method="post">
+		<form action="profile.php" method="post">
 				
     		<h5>Join Group</h5>
     			<p><label for="group">Choose Group:</label></p>
