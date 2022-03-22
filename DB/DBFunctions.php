@@ -262,7 +262,7 @@ function getHistoricalStats(){
 			$KD = $row["KD"];
 			$GPM = $row["GPM"]; 
 			$GDM = $row["GDM"];
-			$all_info = array("Name"=>$name, "Region"=>$region, "twimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
+			$all_info = array("Name"=>$name, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
 		}
 	echo "WHILE LOOP ENDED";
 	$all_info = json_encode($all_info);
