@@ -247,13 +247,19 @@ function getHistoricalStats(){
 	$connection = dbConnection();
 	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM login";
 	$result = $conn->query($sql);
+	$all_info = [];
 	if ($result->num_rows > 0) {
 	// output data of each row
 		while($row = $result->fetch_assoc()) {
-			echo "<tr><td>" . $row["Name"]. "</td><td>" . $row["Region"] . "</td><td>"
-			. $row["trimWin_rate"]. "</td><td>" . $row["KD"] . "</td><td>" . $row["GPM"] . "</td><td>" . $row["GDM"] . "</td></tr>";
+			$name = $row["Name"];
+			$region = $row["Region"];
+			$trimWin_rate = $row["trimWin_rate"];
+			$KD = $row["KD"];
+			$GPM = $row["GPM"]; 
+			$GDM = $row["GDM"];
+			$all_info = array("Name"=>$name, "Region"=>$region, "twimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM)
 		}
-	echo "</table>";
+	return json_encode($all_info);
 	} 
 	
 	else { echo "0 results"; }
