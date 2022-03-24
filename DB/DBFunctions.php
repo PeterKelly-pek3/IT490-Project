@@ -247,7 +247,7 @@ function getHistoricalStats(){
 	$connection = dbConnection();
 	echo "Connection Successful";
 	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM HistoricalData";
-	$result = $conn->query($sql);
+	$result = $connection->query($sql);
 	echo "SQL QUERY";
 	$all_info = [];
 	echo "Empty Array Created";
