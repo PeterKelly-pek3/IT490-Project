@@ -46,7 +46,7 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 
                                 <button type="submit" class="btn4" name="chat">Chat</button>
                         </div>
-                        <p><a href="logout.php?logout='1'" style="color: red;">Logout>
+                        <p><a href="logout.php?logout='1'" style="color: red;">Logout</a></p>
                 </form>
 				
 		<h4>Create Group</h4>
