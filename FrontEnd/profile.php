@@ -54,7 +54,7 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
     			<label for="groupname">Enter Group Name:</label><br />
     			<input id="groupname" name="groupname" type="text" value="" /><br />
     			<label for="groupkey">Create Group Key:</label><br />
-    			<input id="groupkey" name="groupkey" type="text" value="" /><br /><br />
+    			<input id="groupkey" name="groupkey" type="number" value="" /><br /><br />
     			<button type="submit" name="create_group">Create Group</button>
 			</form>
 
