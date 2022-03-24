@@ -93,4 +93,6 @@ foreach($array as $value) {
         <th>GPM</th>
         <th>GDM</th>
     </tr>
+</table>
+</body>
 
