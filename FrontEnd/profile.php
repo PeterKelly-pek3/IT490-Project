@@ -3,10 +3,10 @@
 session_start();
 
 //Check login and redirect
-if (!$_SESSION["logged"])
-{
-	header("Location: /loginRegister.html");
-}
+//if (!$_SESSION["logged"])
+//{
+//	header("Location: /loginRegister.html");
+//}
 
 
 include('webClient.php');
