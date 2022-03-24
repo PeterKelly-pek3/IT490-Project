@@ -229,7 +229,7 @@ function groupjoin($group, $gkey, $username){
 	$check_spot_query = "SELECT 'Player'.$x FROM Groups;";
 	$result = $connection->query($check_spot_query);   
 		if (is_null($result)) {
-  			$joingroup_query = "INSERT INTO Groups Player.$x VALUES ('$username') WHERE Group = $group AND Key = $gkey";
+  			$joingroup_query = "INSERT INTO Groups Player.$x VALUES ('$username') WHERE Name = $group AND Code = $gkey";
 			$result = $connection->query($joingroup_query);
 			return true;
 		}
