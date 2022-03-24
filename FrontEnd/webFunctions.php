@@ -100,7 +100,7 @@ if (isset($_POST['create_group']))
 {
 	$request = array();
 
-	$request['type'] = "CreateGroup";
+	$request['type'] = "groupsubmit";
 	$groupname = $_REQUEST['groupname'];
 	$request['groupname'] = $groupname;
 	$groupkey = $_REQUEST['groupkey'];
