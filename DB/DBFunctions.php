@@ -213,6 +213,8 @@ function groupsubmit($groupname, $groupkey)
 {
 
     $connection = dbConnection();
+
+    $groupkey = intval($groupkey);
     $newgroup_query = "INSERT INTO Groups (Name, Code) VALUES ('$groupname', '$groupkey')";
     $result = $connection->query($newgroup_query);
     return true;
