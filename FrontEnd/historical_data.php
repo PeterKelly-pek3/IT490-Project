@@ -95,4 +95,5 @@ foreach($array as $value) {
     </tr>
 </table>
 </body>
+</html>
 
