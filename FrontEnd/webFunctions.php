@@ -104,7 +104,7 @@ if (isset($_POST['create_group']))
 	$groupname = $_REQUEST['groupname'];
 	$request['groupname'] = $groupname;
 	$groupkey = $_REQUEST['groupkey'];
-	$request['groupkey'] = "groupkey";
+	$request['groupkey'] = $groupkey;
 	
 
 	$returnedValue = createClientForDb($request);
