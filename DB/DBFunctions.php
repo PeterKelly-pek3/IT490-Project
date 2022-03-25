@@ -211,12 +211,16 @@ function getHistStats()
 
 function groupsubmit($groupname, $groupkey)
 {
-
+	
     $connection = dbConnection();
+	echo "Connected to Database";
+	
 
    
     $newgroup_query = "INSERT INTO CreateGroups VALUES ('$groupname', '$groupkey', NULL)";
+	echo "Query Created";
     $result = $connection->query($newgroup_query);
+	echo "INserted into Database";
     return true;
 
 
