@@ -24,37 +24,10 @@ console.log("hello world");
 if (isset($_POST['Get_Stats']))
 {
     $response = getHistoricalStats();
-
+    echo print_r($response);
 }
-$array = json_decode($response,true);
-console.log($array);
-foreach($array as $value) {
-    foreach($value as $data) {
-        echo "<br>";
-        $Name = $data['Name'];
-        echo "Name: ".$Name;
-        echo "<br>";
-        $Season = $data['Season'];
-        echo "Season: ".$Season;
-        echo "<br>";
-        $Region = $data['Region'];
-        echo "Region: ".$Region;
-        echo "<br>";
-        $Win_rate = $data['trimWin_rate'];
-        echo "Win Rate: ".$Win_rate;
-        echo "<br>";
-        $KD = $data['KD'];
-        echo "KD: ".$KD;
-        echo "<br>";
-        $GPM = $data['GPM'];
-        echo "GPM: ".$GPM;
-        echo "<br>";
-        $GDM = $data['GDM'];
-        echo "GDM: ".$GDM;
-        echo "<br>";
-    }
 
-}
+
 
 ?>
 
