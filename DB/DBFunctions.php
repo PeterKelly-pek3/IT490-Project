@@ -238,11 +238,7 @@ function groupjoin($gkey, $username){
     foreach ($result as $value) {
 	    foreach ($value as $data) {
 		if ($data != $gkey) {
-		//echo implode(", ", $value);
-		//echo print_r($value);
-		echo $gkey;
-	    	//echo "FUCK YOU";
-		echo $data;
+			echo "Key not matched";
 	
 	    	
     	        }
