@@ -231,20 +231,13 @@ function groupjoin($group, $gkey, $username){
 
     $connection = dbConnection();
 
-    for ($x = 1; $x <= 10; $x++) {
-	$check_spot_query = "SELECT 'Player'.$x FROM Groups;";
-	$result = $connection->query($check_spot_query);   
-		if (is_null($result)) {
-  			$joingroup_query = "INSERT INTO Groups Player.$x VALUES ('$username') WHERE Name = $group AND Code = $gkey";
-			$result = $connection->query($joingroup_query);
-			return true;
-		}
-	    	else {
-			return false;	
-  		
-    		}
+    
 
-    }
+    $joingroup_query = "INSERT INTO Groups (Player) VALUES ('$username') WHERE Name = $group AND Code = $gkey";
+    $result = $connection->query($joingroup_query);
+		
+
+    
 }
 
 //get historical stats to display on frontend
