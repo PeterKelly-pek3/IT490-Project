@@ -122,7 +122,7 @@ if (isset($_POST['groupjoin']))
     $request['group'] = $group;
     $gkey = $_REQUEST['gkey'];
     $request['gkey'] = $gkey;
-    $_SESSION["username"] = $username;
+    $_SESSION['username'] = $username;
     $request['username'] = $username;
 
 
