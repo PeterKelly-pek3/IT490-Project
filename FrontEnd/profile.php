@@ -76,7 +76,9 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 			
 		<h6>Get Historical Data Stats<h6>
 			<form action="historical_data.php" method="post">
-    				<input type="submit" name ="Get_Stats" value="Get_Stats" />
+				<label for="teamname">Enter Team Name:</label><br />
+    				<input id="teamname" name="teamname" type="text" value="" /><br />
+    				<input type="submit" name ="Get_Stats" value="Get Team Stats" />
 			</form>
 			
 	<script type="text/javascript" src="webScripts.js">
