@@ -270,7 +270,7 @@ function getHistoricalStats(){
 			$GDM = $row["GDM"];
 			
 			$team_stats = array("Name"=>$name, "Season"=>$season, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
-			$all_info = array("Match".$num=>$team_stats);
+			$all_info = array_push("Match".$num=>$team_stats);
 			$num++;
 		}
 	echo print_r($all_info);
