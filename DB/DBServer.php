@@ -73,7 +73,7 @@ function requestProcessor($request)
 		//Join user group
 		case "groupjoin":
     			echo "groupjoin\n";
-   		 	$response_msg = groupjoin($request['group'], $request['gkey'], $request['username']);
+   		 	$response_msg = groupjoin($request['gkey'], $request['username']);
     			break;
 			
 		//Get historical stats
