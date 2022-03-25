@@ -259,8 +259,11 @@ function getHistoricalStats(){
 		$num = 0;
 		while($row = $result->fetch_assoc()) {
 			$name = $row["Name"];
+			echo $name;
 			$season = $row["Season"];
+			echo $season;
 			$region = $row["Region"];
+			echo $region;
 			$trimWin_rate = $row["trimWin_rate"];
 			$KD = $row["KD"];
 			$GPM = $row["GPM"]; 
