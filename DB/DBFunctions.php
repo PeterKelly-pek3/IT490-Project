@@ -265,7 +265,7 @@ function getHistoricalStats(){
 			$GDM = $row["GDM"];
 			$all_info = array("Name"=>$name, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
 		}
-	vardump($all_info);
+	echo vardump($all_info);
 	$all_info = json_encode($all_info);
 	return $all_info;
 	} 
