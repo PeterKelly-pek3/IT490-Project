@@ -18,16 +18,28 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
 ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/errLog.txt');
-
+#Getting the group values to display on the page.
 function getGroups()
 {
-	$request = array();
+	$group = array();
 	
-	$sql = 'SELECT groupname, groupkey From CreateGroups';
+	$player = array();
 	
-	$result = $connection->query($sql);
-  
-	return $result;
+	$group = 'SELECT groupname, groupkey FROM CreateGroups';
+	
+	$player = 'SELECT username, gkey FROM CreateTeams';
+	
+	$resultgroup = $connection->query($group);
+  	
+	$resultplayer = $connection->query($player);
+	
+	if(group[1] == player[1]){
+	return $resultgroup;
+		
+	} 
+	else{
+		echo 'FUCK YOU, GOT NO FRIENDS OR BITCHES.';
+	}
 }
 }
 ?>
