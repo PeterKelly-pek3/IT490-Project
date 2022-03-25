@@ -253,7 +253,7 @@ function getHistoricalStats(){
 	$connection = dbConnection();
 	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM HistoricalData";
 	$result = $connection->query($sql);
-	//$all_info = [];
+	$all_info = [];
 	if ($result->num_rows > 0) {
 	// output data of each row
 		$num = 0;
@@ -266,7 +266,7 @@ function getHistoricalStats(){
 			$GPM = $row["GPM"]; 
 			$GDM = $row["GDM"];
 			
-			$team_stats = array("Name"=>$name, "Season"=>$season, Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
+			$team_stats = array("Name"=>$name, "Season"=>$season, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
 			$all_info = array("Match".$num=>$team_stats);
 			$num++;
 		}
