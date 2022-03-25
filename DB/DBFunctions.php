@@ -235,17 +235,20 @@ function groupjoin($gkey, $username){
     
     $select_key_query = "SELECT code FROM CreateGroups";
     $result = $connection->query($select_key_query);
-    if ($result != $gkey) {
-	    echo "FUCK YOU";
-	    return false;
-    }
-    else {
-	 $joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey')";
-    	 $result = $connection->query($joingroup_query);
-	 echo "GOOD FUCKING JOB DUMB FUCK";
-	 return true;
+    for each ($result as $value) {
+	   if ($value != $gkey) {
+	    	echo "FUCK YOU";
+	    	return false;
+    	    }
+    	   else {
+	 	$joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey')";
+    	 	$result = $connection->query($joingroup_query);
+	 	echo "GOOD FUCKING JOB DUMB FUCK";
+	 	return true;
         
-    }
+    } 
+ }
+    
    
 		
 
