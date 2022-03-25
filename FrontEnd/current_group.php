@@ -50,6 +50,14 @@ function getGroups()
   <title>Current Groups</title>
  </head>
   <h2>This is the groups that are avaible.</h2>
+	<form action="current_group.php" method="post">		
+    		<h5>Recruit Group</h5>
+			<label for="username">Enter Username:</label><br />
+    			<input id="username" name="username" type="text" value="" />
+    			<label for="groupname">Enter Group Name:</label><br />
+    			<input id="groupname" name="gkey" type="text" value="" />
+    			<p><button type="submit" name="grouprecruit">Recruit Group</button></p>
+	</form>
  <body>
  <?php echo getGroups();  ?>
  </body>
