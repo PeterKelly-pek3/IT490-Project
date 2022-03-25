@@ -237,6 +237,8 @@ function groupjoin($gkey, $username){
     $result = $connection->query($select_key_query);
     foreach ($result as $value) {
 	   if ($value != $gkey) {
+		echo $value;
+		echo $gkey;
 	    	echo "FUCK YOU";
 	    	return false;
     	    }
