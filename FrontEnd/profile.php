@@ -64,11 +64,10 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
     		<h5>Join Group</h5>
     			<p><label for="group">Choose Group:</label></p>
 
-    			<select id="group" name="group">
-        			<option value="group1">Group1</option>
-       		 		<option value="group2">Group2</option>
-    			</select>
-    			<br />
+  
+			<label for="group">Enter Group Name:</label><br />
+    			<input id="group" name="group" type="text" value="" />
+			
     			<label for="gkey">Enter Group Key:</label><br />
     			<input id="gkey" name="gkey" type="text" value="" />
     			<p><button type="submit" name="groupjoin">Join Group</button></p>
