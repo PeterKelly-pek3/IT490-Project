@@ -24,8 +24,7 @@ console.log("hello world");
 if (isset($_POST['Get_Stats']))
 {
     $response = getHistoricalStats();
-    return $response;
-    console.log($response);
+
 }
 $array = json_decode($response,true);
 console.log($array);
