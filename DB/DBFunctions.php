@@ -215,7 +215,7 @@ function groupsubmit($groupname, $groupkey)
     $connection = dbConnection();
 
    
-    $newgroup_query = "INSERT INTO Groups VALUES ('$groupname', '$groupkey')";
+    $newgroup_query = "INSERT INTO CreateGroups VALUES ('$groupname', '$groupkey', NULL)";
     $result = $connection->query($newgroup_query);
     return true;
 
