@@ -230,7 +230,7 @@ function groupsubmit($groupname, $groupkey)
 function groupjoin($group, $gkey, $username){
 
     $connection = dbConnection();
-
+    echo $username;
     
 
     $joingroup_query = "INSERT INTO Groups (player) VALUES ('$username') WHERE uname = $group AND code = $gkey";
