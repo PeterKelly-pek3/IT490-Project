@@ -227,13 +227,13 @@ function groupsubmit($groupname, $groupkey)
 }
 
 // Join Group
-function groupjoin($group, $gkey, $username){
+function groupjoin($gkey, $username){
 
     $connection = dbConnection();
     echo $username;
     
 
-    $joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey') WHERE uname = $group AND code = $gkey";
+    $joingroup_query = "INSERT INTO CreateTeams (players) VALUES ('$username') WHERE code = '$gkey'";
     $result = $connection->query($joingroup_query);
 		
 
