@@ -221,6 +221,9 @@ function groupsubmit($groupname, $groupkey)
 	echo "Query Created";
     $result = $connection->query($newgroup_query);
 	echo "INserted into Database";
+    $newteam_query = "INSERT INTO CreateTeams (code) VALUES ('$groupkey')";
+	echo"Query Creadted";
+    $result = $connection->query($newteam_query);
     return true;
 
 
@@ -234,7 +237,9 @@ function groupjoin($gkey, $username){
     
 
     $joingroup_query = "INSERT INTO CreateTeams (players) VALUES ('$username') WHERE code = '$gkey'";
+    $newteam_query = "INSERT INTO CreateTeams (code) VALUES ('$gkey')";
     $result = $connection->query($joingroup_query);
+    $result = $connection->query($newteam_query);
 		
 
     
