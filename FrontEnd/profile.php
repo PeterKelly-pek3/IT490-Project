@@ -63,11 +63,6 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 		<form action="profile.php" method="post">
 				
     		<h5>Join Group</h5>
-    			<p><label for="group">Choose Group:</label></p>
-
-  
-			<label for="group">Enter Group Name:</label><br />
-    			<input id="group" name="group" type="text" value="" />
 			
     			<label for="gkey">Enter Group Key:</label><br />
     			<input id="gkey" name="gkey" type="text" value="" />
