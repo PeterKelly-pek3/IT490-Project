@@ -274,7 +274,6 @@ function getHistoricalStats(){
 			$num++;
 		}
 	echo print_r($all_info);
-	$all_info = json_encode($all_info);
 	return $all_info;
 	} 
 	
