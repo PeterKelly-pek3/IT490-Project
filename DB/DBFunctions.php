@@ -240,7 +240,7 @@ function groupjoin($gkey, $username){
 	    return false;
     }
     else {
-	 $joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey');
+	 $joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey')";
     	 $result = $connection->query($joingroup_query);
 	 echo "GOOD FUCKING JOB DUMB FUCK";
 	 return true;
