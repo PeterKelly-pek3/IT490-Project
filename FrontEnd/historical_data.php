@@ -24,11 +24,10 @@ console.log("hello world");
 if (isset($_POST['Get_Stats']))
 {
     $response = getHistoricalStats();
-    echo print_r($response);
+
     
 
-    foreach($response as $value) {
-        foreach($value as $data) {
+    foreach($response as $data) {
             echo "<br>";
             $Name = $data['Name'];
             echo "Name: ".$Name;
@@ -52,7 +51,6 @@ if (isset($_POST['Get_Stats']))
             echo "GDM: ".$GDM;
             echo "<br>";
             
-        }
     }
 
 }
