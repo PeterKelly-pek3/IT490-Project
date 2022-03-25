@@ -121,6 +121,8 @@ if (isset($_POST['groupjoin']))
     $gkey = $_REQUEST['gkey'];
     $request['gkey'] = $gkey;
     $_SESSION['username'] = $username;
+     console.log("hello");
+	console.log($username);
     $request['username'] = $username;
 
 
