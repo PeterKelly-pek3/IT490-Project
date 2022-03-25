@@ -253,7 +253,7 @@ function getHistoricalStats(){
 	$connection = dbConnection();
 	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM HistoricalData";
 	$result = $connection->query($sql);
-	$all_info = [];
+	//$all_info = [];
 	if ($result->num_rows > 0) {
 	// output data of each row
 		while($row = $result->fetch_assoc()) {
