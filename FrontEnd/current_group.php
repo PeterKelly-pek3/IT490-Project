@@ -20,23 +20,25 @@ ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
 ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/errLog.txt');
 
-function getGroupName()
+function getGroups()
 {
 	$request = array();
-
-  $groupname = $_REQUEST['groupname'];
-
-	return $groupname[0];
 	
+	$sql = 'SELECT groupname, groupcode From CreateGroups';
+	
+	$result = $connection->query($sql);
+  
+	return $result;
+}
 }
 ?>
 
 
 <DOCTYPE! html>
  <head>
-  <title>Current Group</title>
+  <title>Current Groups</title>
  </head>
-  <h2>This is the group you are a part of.</h2>
+  <h2>This is the groups that are avaible.</h2>
  <body>
  <?php echo getGroupName();  ?>
  </body>
