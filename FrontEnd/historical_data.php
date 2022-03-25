@@ -51,6 +51,8 @@ if (isset($_POST['Get_Stats']))
             $GDM = $data['GDM'];
             echo "GDM: ".$GDM;
             echo "<br>";
+            
+        }
     }
 
 }
