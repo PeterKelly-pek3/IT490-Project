@@ -236,11 +236,12 @@ function groupjoin($gkey, $username){
     $select_key_query = "SELECT code FROM CreateGroups";
     $result = $connection->query($select_key_query);
     foreach ($result as $value) {
+	   echo print_r($result);
 	   if ($value != $gkey) {
 		echo $value;
 		echo $gkey;
 	    	echo "FUCK YOU";
-	    	return false;
+	    	
     	    }
     	   else {
 	 	$joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey')";
@@ -248,11 +249,11 @@ function groupjoin($gkey, $username){
 	 	echo "GOOD FUCKING JOB DUMB FUCK";
 	 	return true;
         
-    } 
- }
+    	    } 
+     }
     
    
-		
+return false;		
 
     
 }
