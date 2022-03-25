@@ -233,7 +233,7 @@ function groupjoin($group, $gkey, $username){
     echo $username;
     
 
-    $joingroup_query = "INSERT INTO Groups (player) VALUES ('$username') WHERE uname = $group AND code = $gkey";
+    $joingroup_query = "INSERT INTO Teams (username, key) VALUES ('$username', '$gkey') WHERE uname = $group AND code = $gkey";
     $result = $connection->query($joingroup_query);
 		
 
