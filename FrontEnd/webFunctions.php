@@ -118,8 +118,6 @@ if (isset($_POST['groupjoin']))
     $request = array();
 
     $request['type'] = "groupjoin";
-    $group = $_REQUEST['group'];
-    $request['group'] = $group;
     $gkey = $_REQUEST['gkey'];
     $request['gkey'] = $gkey;
     $_SESSION['username'] = $username;
