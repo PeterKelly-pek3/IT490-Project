@@ -137,7 +137,7 @@ if (isset($_POST['RecruitTeam']))
 
     $request['type'] = "RecruitTeam";
     $gkey = $_REQUEST['Ename'];
-    $request['gkey'] = Ename;
+    $request['gteam'] = Ename;
     $username = $_REQUEST['username'];
     $request['username'] = $username;
 
