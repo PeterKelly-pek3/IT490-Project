@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 //Check login and redirect
 //if (!$_SESSION["logged"])
@@ -24,7 +23,7 @@ function getGroups()
 {
 	$request = array();
 	
-	$sql = 'SELECT groupname, groupcode From CreateGroups';
+	$sql = 'SELECT groupname, groupkey From CreateGroups';
 	
 	$result = $connection->query($sql);
   
@@ -40,6 +39,6 @@ function getGroups()
  </head>
   <h2>This is the groups that are avaible.</h2>
  <body>
- <?php echo getGroupName();  ?>
+ <?php echo getGroups();  ?>
  </body>
 </html>
