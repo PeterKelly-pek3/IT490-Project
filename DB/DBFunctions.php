@@ -249,19 +249,14 @@ function groupjoin($group, $gkey, $username){
 
 //get historical stats to display on frontend
 function getHistoricalStats(){
-	echo "Start Function";
+	
 	$connection = dbConnection();
-	echo "Connection Successful";
 	$sql = "SELECT Name, Season, Region, trimWin_rate, KD, GPM, GDM FROM HistoricalData";
 	$result = $connection->query($sql);
-	echo "SQL QUERY";
 	$all_info = [];
-	echo "Empty Array Created";
 	if ($result->num_rows > 0) {
 	// output data of each row
-		echo "IF STATEMENT STARTED";
 		while($row = $result->fetch_assoc()) {
-			echo "WHILE STATEMENT STARTED";
 			$name = $row["Name"];
 			$region = $row["Region"];
 			$trimWin_rate = $row["trimWin_rate"];
@@ -270,9 +265,8 @@ function getHistoricalStats(){
 			$GDM = $row["GDM"];
 			$all_info = array("Name"=>$name, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
 		}
-	echo "WHILE LOOP ENDED";
+	vardump($all_info);
 	$all_info = json_encode($all_info);
-	echo "FUCK FUCK FUCK";
 	return $all_info;
 	} 
 	
