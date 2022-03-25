@@ -221,9 +221,7 @@ function groupsubmit($groupname, $groupkey)
 	echo "Query Created";
     $result = $connection->query($newgroup_query);
 	echo "INserted into Database";
-    $newteam_query = "INSERT INTO CreateTeams (code) VALUES ('$groupkey')";
-	echo"Query Creadted";
-    $result = $connection->query($newteam_query);
+    
     return true;
 
 
@@ -235,11 +233,20 @@ function groupjoin($gkey, $username){
     $connection = dbConnection();
     echo $username;
     
-
-    $joingroup_query = "INSERT INTO CreateTeams (players) VALUES ('$username') WHERE code = '$gkey'";
-    $newteam_query = "INSERT INTO CreateTeams (code) VALUES ('$gkey')";
-    $result = $connection->query($joingroup_query);
-    $result = $connection->query($newteam_query);
+    $select_key_query = "SELECT code FROM CreateGroups";
+    $result = $connection->query($select_key_query);
+    if ($result != $gkey) {
+	    echo "FUCK YOU";
+	    return false;
+    }
+    else {
+	 $joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey');
+    	 $result = $connection->query($joingroup_query);
+	 echo "GOOD FUCKING JOB DUMB FUCK";
+	 return true;
+        
+    }
+   
 		
 
     
