@@ -128,6 +128,26 @@ if (isset($_POST['groupjoin']))
 
     return $returnedValue;
 }
+
+
+// Recruit A team
+if (isset($_POST['RecruitTeam']))
+{
+    $request = array();
+
+    $request['type'] = "RecruitTeam";
+    $gkey = $_REQUEST['Ename'];
+    $request['gkey'] = Ename;
+    $username = $_REQUEST['username'];
+    $request['username'] = $username;
+
+
+    $returnedValue = createClientForDb($request);
+
+    return $returnedValue;
+}
+
+
 //Get historical stats to display in front end
 function getHistoricalStats()
 {
