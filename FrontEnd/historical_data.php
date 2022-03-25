@@ -28,6 +28,8 @@ if (isset($_POST['Get_Stats']))
     
 
     foreach($response as $data) {
+        if ($data['Name'] == $_POST['teamname']){
+            
             echo "<br>";
             $Name = $data['Name'];
             echo "Name: ".$Name;
@@ -50,6 +52,8 @@ if (isset($_POST['Get_Stats']))
             $GDM = $data['GDM'];
             echo "GDM: ".$GDM;
             echo "<br>";
+            
+        }
             
     }
 
