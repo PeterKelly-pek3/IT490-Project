@@ -75,6 +75,12 @@ function requestProcessor($request)
     			echo "groupjoin\n";
    		 	$response_msg = groupjoin($request['gkey'], $request['username']);
     			break;
+		
+		//Join user group
+		case "RecruitTeam":
+    			echo "RecruitTeam\n";
+   		 	$response_msg = RecruitTeam($request['Eteam'], $request['username']);
+    			break;
 			
 		//Get historical stats
 		case "getHistoricalStats":
