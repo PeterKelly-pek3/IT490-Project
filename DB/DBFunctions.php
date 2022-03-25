@@ -256,15 +256,17 @@ function getHistoricalStats(){
 	//$all_info = [];
 	if ($result->num_rows > 0) {
 	// output data of each row
+		$num = 0;
 		while($row = $result->fetch_assoc()) {
 			$name = $row["Name"];
+			$season = $row["Season"];
 			$region = $row["Region"];
 			$trimWin_rate = $row["trimWin_rate"];
 			$KD = $row["KD"];
 			$GPM = $row["GPM"]; 
 			$GDM = $row["GDM"];
-			$num = 1;
-			$team_stats = array("Name"=>$name, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
+			
+			$team_stats = array("Name"=>$name, "Season"=>$season, Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
 			$all_info = array("Match".$num=>$team_stats);
 			$num++;
 		}
