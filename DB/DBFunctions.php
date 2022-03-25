@@ -263,7 +263,10 @@ function getHistoricalStats(){
 			$KD = $row["KD"];
 			$GPM = $row["GPM"]; 
 			$GDM = $row["GDM"];
-			$all_info = array("Name"=>$name, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
+			$num = 1;
+			$team_stats = array("Name"=>$name, "Region"=>$region, "trimWin_rate"=>$trimWin_rate, "KD"=>$KD, "GPM"=>$GPM, "GDM"=>$GDM);
+			$all_info = array("Match".$num=>$team_stats);
+			$num++;
 		}
 	echo print_r($all_info);
 	$all_info = json_encode($all_info);
