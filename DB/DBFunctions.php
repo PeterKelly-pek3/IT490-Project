@@ -235,7 +235,7 @@ function groupjoin($gkey, $username){
     
     $select_key_query = "SELECT code FROM CreateGroups";
     $result = $connection->query($select_key_query);
-    for each ($result as $value) {
+    foreach ($result as $value) {
 	   if ($value != $gkey) {
 	    	echo "FUCK YOU";
 	    	return false;
