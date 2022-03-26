@@ -19,6 +19,8 @@ ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
 ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/errLog.txt');
 #Getting the group values to display on the page.
+
+#Should Leave this function here or add it to the DBFunctions file?
 function getGroups()
 {
 	$group = array();
