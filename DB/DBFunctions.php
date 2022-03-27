@@ -292,6 +292,29 @@ function getHistoricalStats(){
 	
 	///else { echo "0 results"; }
 	///$conn->close();
+
+#Get the groups of players
+	function getGroups()
+{
+	$group = array();
+	
+	$player = array();
+	
+	$group = 'SELECT groupname, groupkey FROM CreateGroups';
+	
+	$player = 'SELECT username, gkey FROM CreateTeams';
+	
+	$resultgroup = $connection->query($group);
+  	
+	$resultplayer = $connection->query($player);
+	
+	if(group[1] == player[1]){
+	return $resultgroup;
+		
+	} 
+	else{
+		echo 'FUCK YOU, GOT NO FRIENDS OR BITCHES.';
+	}
 	
 	
 }
