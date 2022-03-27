@@ -332,7 +332,11 @@ function getGroups($username)
 			
 				echo "Team Name Selected";
 				print_r($result_group_name);
-				return $result_group_name;
+				while($row = $result_group_name->fetch_assoc()) {
+					$team_name = $row["players"];
+					echo $team_name;
+				}
+				return $team_name;
 				echo "Result Returned to Front-End";
 				break;
 			}
