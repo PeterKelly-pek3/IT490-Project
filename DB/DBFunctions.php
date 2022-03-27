@@ -294,28 +294,31 @@ function getHistoricalStats(){
 	///$conn->close();
 
 #Get the groups of players
-	function getGroups()
+function getGroups($username)
 {
-	$group = array();
 	
-	$player = array();
-	
-	$group = 'SELECT groupname, groupkey FROM CreateGroups';
-	
-	$player = 'SELECT username, gkey FROM CreateTeams';
-	
+	$group = 'SELECT code FROM CreateGroups';
 	$resultgroup = $connection->query($group);
-  	
-	$resultplayer = $connection->query($player);
-	
-	if(group[1] == player[1]){
-	return $resultgroup;
+	foreach ($resultgroup as $groupcode) {
+		$player = "SELECT players FROM CreateTeams WHERE code = '$groupcode' and players = '$username'";
+		$resultplayer = $connection->query($player);
+		if (is_null($resultplayer)) {
+			echo "Not in a team";
+		}
+		else {
+			$recruit_team_name = "SELECT Eteam FROM RecruitTable WHERE players = '$username'"; 
+			$result_team_name = $connection->query($recruit_team_name);
+			
+		}
+		else {
+			echo "Error in RecruitTable";
+		}
 		
-	} 
-	else{
-		echo 'FUCK YOU, GOT NO FRIENDS OR BITCHES.';
+		
 	}
 	
+	return $result_team_name;
+	echo "Group Returned to Front End";
 	
 }
 	 
