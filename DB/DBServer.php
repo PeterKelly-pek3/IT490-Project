@@ -87,6 +87,11 @@ function requestProcessor($request)
 			echo "getHistoricalStats\n";
 			$response_msg = getHistoricalStats();
 			break;
+			
+		case "getGroups":
+			echo "getGroups\n";
+			$response_msg = getGroups();
+			break;
 	}
 	return $response_msg;
 }
