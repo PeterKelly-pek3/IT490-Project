@@ -306,8 +306,8 @@ function getGroups($username)
 			echo "Not in a team";
 		}
 		elseif ($resultplayer == $username) {
-			$recruit_team_name = "SELECT Eteam FROM RecruitTable WHERE players = '$username'"; 
-			$result_team_name = $connection->query($recruit_team_name);
+			$select_group_name = "SELECT uname FROM CreateGroups WHERE code = '$groupcode'"; 
+			$result_group_name = $connection->query($recruit_group_name);
 			
 		}
 		else {
@@ -317,7 +317,7 @@ function getGroups($username)
 		
 	}
 	
-	return $result_team_name;
+	return $result_group_name;
 	echo "Group Returned to Front End";
 	
 }
