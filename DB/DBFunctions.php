@@ -289,7 +289,7 @@ function getHistoricalStats(){
 	echo print_r($all_info);
 	return $all_info;
 	} 
-	
+}	
 	///else { echo "0 results"; }
 	///$conn->close();
 
