@@ -332,8 +332,9 @@ function getGroups($username)
 			
 				echo "Team Name Selected";
 				print_r($result_group_name);
+				
 				while($row = $result_group_name->fetch_assoc()) {
-					$team_name = $row["players"];
+					$team_name = $row["uname"];
 					echo $team_name;
 				}
 				return $team_name;
