@@ -301,22 +301,35 @@ function getGroups($username)
 	$group = 'SELECT code FROM CreateGroups';
 	$resultgroup = $connection->query($group);
 	foreach ($resultgroup as $groupcode) {
-		echo "Variable Group Code: ";
-		echo print_r($groupcode);
+		foreach ($groupcode as $singlegroupcode) {
+			
+			echo "Group Code: ";
+			echo print_r($singlegroupcode);
 
-		$player = "SELECT players FROM CreateTeams WHERE code = '$groupcode' and players = '$username'";
-		$resultplayer = $connection->query($player);
-		if (is_null($resultplayer)) {
-			echo "Not in a team";
-		}
-		elseif ($resultplayer == $username) {
-			$select_group_name = "SELECT uname FROM CreateGroups WHERE code = '$groupcode'"; 
-			$result_group_name = $connection->query($select_group_name);
+			$player = "SELECT players FROM CreateTeams WHERE code = '$singlegroupcode' and players = '$username'";
+			$resultplayer = $connection->query($player);
+			echo "Player Selected From Create Teams table";
+			
+			if (is_null($resultplayer)) {
+				echo "Not in a team";
+			}
+			
+			elseif ($resultplayer == $username) {
+				$select_group_name = "SELECT uname FROM CreateGroups WHERE code = '$singlegroupcode'"; 
+				$result_group_name = $connection->query($select_group_name);
+			
+				echo "Team Name Selected";
+			}
+			
+			else {
+				echo "Error in RecruitTable";
+			}
+			
+			
 			
 		}
-		else {
-			echo "Error in RecruitTable";
-		}
+		
+		
 		
 		
 	}
