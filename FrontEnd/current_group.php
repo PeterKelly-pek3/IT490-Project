@@ -53,14 +53,12 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
  </head>
   <h2>This is the groups that are avaible.</h2>
 	<form action="current_group.php" method="post">		
-    		<h5>Recruit Group</h5>
+    		<h5>Show Group and Players</h5>
 			<label for="username">Enter Username:</label><br />
     			<input id="username" name="username" type="text" value="" />
-    			<label for="groupname">Enter Group Name:</label><br />
-    			<input id="groupname" name="gkey" type="text" value="" />
-    			<p><button type="submit" name="grouprecruit">Recruit Group</button></p>
+    			<p><button type="submit" name="getGroups">Recruit Group</button></p>
 	</form>
  <body>
- <?php echo getGroups();  ?>
+
  </body>
 </html>
