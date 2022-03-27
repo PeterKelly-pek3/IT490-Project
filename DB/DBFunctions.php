@@ -314,6 +314,8 @@ function getGroups($username)
 			echo "Player Fetched: ";
 			echo $fetch_player["players"];
 			
+			print_r($fetch_player);
+			
 			
 			
 	
