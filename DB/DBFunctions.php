@@ -305,7 +305,7 @@ function getGroups($username)
 		if (is_null($resultplayer)) {
 			echo "Not in a team";
 		}
-		else {
+		elseif ($resultplayer == $username) {
 			$recruit_team_name = "SELECT Eteam FROM RecruitTable WHERE players = '$username'"; 
 			$result_team_name = $connection->query($recruit_team_name);
 			
