@@ -49,6 +49,7 @@ if (isset($_POST['getGroups']))
 {
 	$username = $_REQUEST['username'];
 	$response = getGroups($username);
+	echo($response);
 	print_r($response);
 }
 ?>
