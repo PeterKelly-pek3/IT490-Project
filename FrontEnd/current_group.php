@@ -44,6 +44,13 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 #	}
 #}'
 #}
+
+if (isset($_POST['getGroups']))
+{
+	$username = $_REQUEST['username'];
+	$response = getGroups($username);
+	print_r($response);
+}
 ?>
 
 
