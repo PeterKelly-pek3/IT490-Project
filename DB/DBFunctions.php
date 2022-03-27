@@ -313,7 +313,7 @@ function getGroups($username)
 			$fetch_player = mysqli_fetch_assoc($resultplayer);
 			echo "Player Fetched: ";
 			echo $fetch_player["players"];
-			echo $resultplayer["players"];
+			
 			
 			
 	
@@ -321,7 +321,7 @@ function getGroups($username)
 				echo "Not in a team";
 			}
 			
-			elseif ($resultplayer["players"] == $username) {
+			elseif ($fetch_player["players"] == $username) {
 				$select_group_name = "SELECT uname FROM CreateGroups WHERE code = '$singlegroupcode'"; 
 				$result_group_name = $connection->query($select_group_name);
 			
