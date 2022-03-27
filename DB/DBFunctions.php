@@ -336,8 +336,9 @@ function getGroups($username)
 				while($row = $result_group_name->fetch_assoc()) {
 					$team_name = $row["uname"];
 					echo $team_name;
+					return $team_name;
 				}
-				return $team_name;
+				
 				echo "Result Returned to Front-End";
 				break;
 			}
