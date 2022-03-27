@@ -163,24 +163,12 @@ function getHistoricalStats()
 #Get current groups for the player 
 function getGroups()
 {
-	$group = array();
+	$request = array();
 	
-	$player = array();
+	$request['type'] = "getGroups";
 	
-	$group = 'SELECT groupname, groupkey FROM CreateGroups';
+	$returnedValue = createClientForDb($request);
 	
-	$player = 'SELECT username, gkey FROM CreateTeams';
 	
-	$resultgroup = $connection->query($group);
-  	
-	$resultplayer = $connection->query($player);
-	
-	if(group[1] == player[1]){
-	return $resultgroup;
-		
-	} 
-	else{
-		echo 'FUCK YOU, GOT NO FRIENDS OR BITCHES.';
-	}
 }
 ?>
