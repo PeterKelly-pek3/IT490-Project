@@ -309,8 +309,12 @@ function getGroups($username)
 			$player = "SELECT players FROM CreateTeams WHERE code = '$singlegroupcode' AND players = '$username'";
 			$resultplayer = $connection->query($player);
 			
-			echo "Player Selected From Create Teams table: ";
-			print_r(mysql_fetch_array($resultplayer));
+			while($row = $result->fetch_assoc()) {
+				echo "Selecting Player with Query.";
+				$result_player = $row["players"];
+				echo "Selected Player: "
+				echo $result_player;
+			}
 	
 			if (is_null($resultplayer)) {
 				echo "Not in a team";
