@@ -310,11 +310,12 @@ function getGroups($username)
 			$resultplayer = $connection->query($player);
 			
 			echo "MYsqli Fetch.";
+			print_r($fetch_player);
 			$fetch_player = mysqli_fetch_assoc($resultplayer);
 			echo "Player Fetched: ";
 			echo $fetch_player["players"];
 			
-			print_r($fetch_player);
+			
 			
 			
 			
