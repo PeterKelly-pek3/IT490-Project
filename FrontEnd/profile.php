@@ -76,7 +76,11 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
     				<input id="teamname" name="teamname" type="text" value="" /><br />
     				<input type="submit" name ="Get_Stats" value="Get Team Stats" />
 			</form>
-			
+		
+		<h7>Group Hub<h7>
+			<form action="current_group.php" method="post">
+    				<input type="submit" name ="" value="Go To Group Hub" />
+			</form>
 	<script type="text/javascript" src="webScripts.js">
 	</script>
 
