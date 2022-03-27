@@ -312,10 +312,8 @@ function getGroups($username)
 			echo "MYsqli Fetch.";
 			$fetch_player = mysqli_fetch_assoc($resultplayer);
 			echo "Player Fetched: ";
-			
-			foreach($fetch_player as $x=>$val) {
-  				echo "$x = $val<br>";
-			}
+			echo gettype($fetch_player);
+			print_r($fetch_player);
 			
 			
 	
