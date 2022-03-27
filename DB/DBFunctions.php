@@ -331,6 +331,7 @@ function getGroups($username)
 				$result_group_name = $connection->query($select_group_name);
 			
 				echo "Team Name Selected";
+				print_r($result_group_name);
 				return $result_group_name;
 				echo "Result Returned to Front-End";
 				break;
