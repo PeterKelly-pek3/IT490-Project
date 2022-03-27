@@ -296,6 +296,7 @@ function getHistoricalStats(){
 #Get the groups of players
 function getGroups($username)
 {
+	$connection = dbConnection();
 	
 	$group = 'SELECT code FROM CreateGroups';
 	$resultgroup = $connection->query($group);
