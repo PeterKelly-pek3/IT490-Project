@@ -327,7 +327,7 @@ function getGroups($username)
 			}
 			
 			elseif ($fetch_player["players"] == $username) {
-				$select_group_name = "SELECT uname FROM CreateGroups"; 
+				$select_group_name = "SELECT uname FROM CreateGroups WHERE code = '$singlegroupcode'"; 
 				$result_group_name = $connection->query($select_group_name);
 			
 				echo "Team Name Selected";
