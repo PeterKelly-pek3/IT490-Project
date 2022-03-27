@@ -171,6 +171,8 @@ function getGroups($username)
 	
 	$returnedValue = createClientForDb($request);
 	
+	return $returnedValue;
+	
 	
 }
 ?>
