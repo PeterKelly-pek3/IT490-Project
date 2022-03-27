@@ -312,7 +312,7 @@ function getGroups($username)
 			echo "MYsqli Fetch.";
 			$fetch_player = mysqli_fetch_assoc($resultplayer);
 			echo "Player Fetched: ";
-			echo $fetch_player;
+			print_r($fetch_player);
 			
 	
 			if (is_null($resultplayer)) {
@@ -339,9 +339,10 @@ function getGroups($username)
 		
 	}
 	
-	return $result_group_name;
 	echo $result_group_name;
-	echo "Group Returned to Front End";
+	echo "Result returned to Front-End";
+	return $result_group_name;
+	
 	
 }
 	 
