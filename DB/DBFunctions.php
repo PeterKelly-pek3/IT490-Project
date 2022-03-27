@@ -310,7 +310,7 @@ function getGroups($username)
 			$resultplayer = $connection->query($player);
 			
 			echo "Player Selected From Create Teams table: ";
-			echo print_r(mysql_fetch_array($resultplayer));
+			print_r(mysql_fetch_array($resultplayer));
 	
 			if (is_null($resultplayer)) {
 				echo "Not in a team";
