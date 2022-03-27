@@ -90,7 +90,7 @@ function requestProcessor($request)
 			
 		case "getGroups":
 			echo "getGroups\n";
-			$response_msg = getGroups();
+			$response_msg = getGroups($request['username']);
 			break;
 	}
 	return $response_msg;
