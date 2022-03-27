@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 //Check login and redirect
 //if (!$_SESSION["logged"])
