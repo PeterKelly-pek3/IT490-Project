@@ -161,12 +161,12 @@ function getHistoricalStats()
 	
 }
 #Get current groups for the player 
-if (isset($_POST['getGroups']))
+function getGroups($username)
 {
 	$request = array();
 	
 	$request['type'] = "getGroups";
-	$username = $_REQUEST['username'];
+	
         $request['username'] = $username;
 	
 	$returnedValue = createClientForDb($request);
