@@ -306,10 +306,11 @@ function getGroups($username)
 		foreach ($groupcode as $singlegroupcode) {
 		
 
-			$player = "SELECT players FROM CreateTeams WHERE code = '$singlegroupcode' and players = '$username'";
+			$player = "SELECT players FROM CreateTeams WHERE code = '$singlegroupcode' AND players = '$username'";
 			$resultplayer = $connection->query($player);
+			
 			echo "Player Selected From Create Teams table: ";
-			echo print_r($resultplayer);
+			echo print_r(mysql_fetch_array($resultplayer));
 	
 			if (is_null($resultplayer)) {
 				echo "Not in a team";
