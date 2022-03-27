@@ -301,6 +301,9 @@ function getGroups($username)
 	$group = 'SELECT code FROM CreateGroups';
 	$resultgroup = $connection->query($group);
 	foreach ($resultgroup as $groupcode) {
+		echo "Variable Group Code: ";
+		echo print_r($groupcode);
+
 		$player = "SELECT players FROM CreateTeams WHERE code = '$groupcode' and players = '$username'";
 		$resultplayer = $connection->query($player);
 		if (is_null($resultplayer)) {
@@ -308,7 +311,7 @@ function getGroups($username)
 		}
 		elseif ($resultplayer == $username) {
 			$select_group_name = "SELECT uname FROM CreateGroups WHERE code = '$groupcode'"; 
-			$result_group_name = $connection->query($recruit_group_name);
+			$result_group_name = $connection->query($select_group_name);
 			
 		}
 		else {
