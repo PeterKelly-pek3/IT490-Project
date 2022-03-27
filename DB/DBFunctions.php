@@ -312,7 +312,7 @@ function getGroups($username)
 			while($row = $result->fetch_assoc()) {
 				echo "Selecting Player with Query.";
 				$result_player = $row["players"];
-				echo "Selected Player: "
+				echo "Selected Player: ";
 				echo $result_player;
 			}
 	
