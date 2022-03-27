@@ -298,18 +298,19 @@ function getGroups($username)
 {
 	$connection = dbConnection();
 	
+	echo $username;
+	
 	$group = 'SELECT code FROM CreateGroups';
 	$resultgroup = $connection->query($group);
 	foreach ($resultgroup as $groupcode) {
 		foreach ($groupcode as $singlegroupcode) {
-			
-			echo "Group Code: ";
-			echo print_r($singlegroupcode);
+		
 
 			$player = "SELECT players FROM CreateTeams WHERE code = '$singlegroupcode' and players = '$username'";
 			$resultplayer = $connection->query($player);
-			echo "Player Selected From Create Teams table";
-			
+			echo "Player Selected From Create Teams table: ";
+			echo $resultplayer;
+	
 			if (is_null($resultplayer)) {
 				echo "Not in a team";
 			}
@@ -322,7 +323,7 @@ function getGroups($username)
 			}
 			
 			else {
-				echo "Error in RecruitTable";
+				echo "Result Player does not equal username";
 			}
 			
 			
@@ -335,6 +336,7 @@ function getGroups($username)
 	}
 	
 	return $result_group_name;
+	echo $result_group_name;
 	echo "Group Returned to Front End";
 	
 }
