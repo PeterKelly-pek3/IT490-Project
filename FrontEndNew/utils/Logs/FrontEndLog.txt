@@ -1,0 +1,19 @@
+
+March 14 2022 - FrontEnd Test Error
+
+March 14 2022 - FrontEnd Test Error
+
+March 14 2022 - FrontEnd Test Error
+
+[14-Mar-2022 16:39:26 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /var/www/html/rabbitMQLib.inc on line 215
+March 14 2022 - FrontEnd Test Error
+
+[14-Mar-2022 16:39:26 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /var/www/html/rabbitMQLib.inc on line 215
+March 14 2022 - FrontEnd Test Error
+
+[14-Mar-2022 16:39:26 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /var/www/html/rabbitMQLib.inc on line 215
+[14-Mar-2022 17:05:01 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /var/www/html/rabbitMQLib.inc on line 215
+March 14 2022 - FrontEnd Test Error
+
+[14-Mar-2022 16:39:26 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /var/www/html/rabbitMQLib.inc on line 215
+[14-Mar-2022 17:05:01 America/New_York] PHP Deprecated:  Function AMQPQueue::declare() is deprecated in /var/www/html/rabbitMQLib.inc on line 215
