@@ -45,7 +45,7 @@ function sendLoginCredentials(username, password)
             		}
 			else
 			{
-                		window.location = "loginRegister.html", true;
+                		window.location = "login.html", true;
             		}
         	}
 		else
