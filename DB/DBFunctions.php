@@ -111,6 +111,9 @@ function getAPIConnection()
 
 	$returnedValue = createDMZClient($request);
 	var_dump($returnedValue);
+	
+	$request['type'] = "GetOdds";
+	$returnedodds = createDMZClient($request);
 
 	echo "Back from DMZ\n";
 	//return $returnedValue;
@@ -137,8 +140,22 @@ function getAPIConnection()
             	//	echo "Event ID: ".$value['id']"\n";
 	    		$eventID = $value['id'];
             	//	echo "\n";
+			
+			$request['type'] = "GetOdds";
+			$request['eventID'] = $eventID;
+			$returnedodds = createDMZClient($request);
+			var_dump($returnedodds);
+			
+			$odds = $returnedodds['results']['odds']['151_1'];
+			
+			foreach($odds as $oddsvalue) 
+			{
+				$Home_Odds = $oddsvalue['home_od'];
+				$Away_Odds = $oddsvalue['away_od'];
+			}
+				
 
-	   		$query = "INSERT INTO LeagueData VALUES ('$leaguename','$hometeam', '$awayteam', '$eventdate', '$eventID', 'Home_Odds', 'Away_Odds')";
+	   		$query = "INSERT INTO LeagueData VALUES ('$leaguename','$hometeam', '$awayteam', '$eventdate', '$eventID', '$Home_Odds', '$Away_Odds')";
 	   		$result = $connection->query($query);
         	}
 	}
