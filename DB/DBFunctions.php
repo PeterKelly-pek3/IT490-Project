@@ -165,8 +165,7 @@ function getOdds()
 		$returnValue = create_odds_DMZ_Client($event);
 		
 		echo "returnValue:  ";
-		var_dump($returnedValue);
-		print_r($returnedValue);
+		echo $returnValue;
 
 		
 		
