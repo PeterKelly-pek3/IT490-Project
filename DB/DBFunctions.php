@@ -161,11 +161,11 @@ function getOdds()
 	foreach ($result as $event) 
 	{
 		
-		echo "eventid: ".$event;
+	
 		$returnValue = create_odds_DMZ_Client($event);
 		
 		echo "returnValue:  ";
-		echo json_encode($returnValue);
+		echo gettype(json_encode($returnValue));
 
 		
 		
