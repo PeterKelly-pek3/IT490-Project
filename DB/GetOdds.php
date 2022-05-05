@@ -1,4 +1,3 @@
-<?php
 #!/usr/bin/php
 <?php
 
