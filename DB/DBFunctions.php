@@ -180,6 +180,9 @@ function getOdds()
 			$Away_Odds = $oddsvalue['away_od'];
 			
 			print_r($event);
+			$event = $event[EventID];
+			echo gettype($event);
+			echo $event;
 			
 			$query = "INSERT INTO LeagueData (Home_Odds, Away_Odds) VALUES ('$Home_Odds','$Away_Odds') WHERE eventID=$event ";
 			$result = $connection->query($query);
