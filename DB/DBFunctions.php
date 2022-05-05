@@ -108,7 +108,7 @@ function getAPIConnection()
 	$request = array();
 
 	$request['type'] = "GetAPI";
-
+	echo "GetAPI Before Creating DMZ Client";
 	$returnedValue = createDMZClient($request);
 	var_dump($returnedValue);
 	
