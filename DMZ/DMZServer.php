@@ -30,6 +30,7 @@ function requestProcessor($request){
 			$eventID = $request['eventID']['EventID'];
 			echo "EventID in DMZServer equals ".$eventID;
 			$response_msg = GetOdds($eventID);
+			echo "Response Message From GetOdds:  ".$response_msg;
 			break;
 
 		// GET HISTORICAL STATISTICS
