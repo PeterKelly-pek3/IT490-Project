@@ -161,7 +161,7 @@ function getOdds()
 	foreach ($result as $event) 
 	{
 		
-		
+		echo "eventid: ".$event;
 		$returnValue = create_odds_DMZ_Client($event);
 		
 		echo "returnValue:  ";
@@ -195,7 +195,7 @@ function create_odds_DMZ_Client($event)
 	$request = array();
 	echo "Request Array Created in create_odds_DMZ_Client Function";
 	$request['type'] = "GetOdds";
-	$request['eventID']['EventID'] = $event;
+	$request['eventID'] = $event;
 	$returnedValue = createDMZClient($request);
 	return var_dump($returnedValue);
 	echo "Back from DMZ\n";
