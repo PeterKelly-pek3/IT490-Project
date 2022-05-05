@@ -27,7 +27,8 @@ function requestProcessor($request){
 			
 		// Get Odds
 		case "GetOdds":
-			$response_msg = GetOdds();
+			$eventID = $request['eventID'];
+			$response_msg = GetOdds($eventID);
 			break;
 
 		// GET HISTORICAL STATISTICS
