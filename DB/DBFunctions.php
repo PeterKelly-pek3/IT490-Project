@@ -138,28 +138,65 @@ function getAPIConnection()
             	//	echo "Event ID: ".$value['id']"\n";
 	    		$eventID = $value['id'];
             	//	echo "\n";
-			
-			$request['type'] = "GetOdds";
-			$request['eventID'] = $eventID;
-			echo "Before return odds DMZ client connection";
-			$returnedodds = createDMZClient($request);
-			var_dump($returnedodds);
-			
-			$odds = $returnedodds['results']['odds']['151_1'];
-			
-			foreach($odds as $oddsvalue) 
-			{
-				$Home_Odds = $oddsvalue['home_od'];
-				$Away_Odds = $oddsvalue['away_od'];
-			}
 				
 
 	   		$query = "INSERT INTO LeagueData (leaguename, hometeam, awayteam, eventdate, eventID) VALUES ('$leaguename','$hometeam', '$awayteam', '$eventdate', '$eventID')";
+			$result = $connection->query($query);
         	}
 	}
 
 	echo "Finished API Database Insert Query.\n";
 	return false;
+}
+//get odds for upcoming matches
+function getOdds()
+{
+	
+	
+	$connection = dbConnection();
+	echo "DB Connection est.\n";
+	$sql = "SELECT EventID FROM LeagueData";
+	$result = $connection->query($sql);
+	
+	foreach ($result as $event) 
+	{
+		
+		
+		$returnValue = create_odds_DMZ_Client($event);
+		
+		$odds = $returnValue['results']['odds']['151_1'];
+			
+		foreach($odds as $oddsvalue) 
+		{
+			$Home_Odds = $oddsvalue['home_od'];
+			$Away_Odds = $oddsvalue['away_od'];
+			$query = "INSERT INTO LeagueData (Home_Odds, Away_Odds) VALUES ('$Home_Odds','$Away_Odds')";
+			$result = $connection->query($query);
+		}
+		
+		
+	}
+	
+	echo "Finished API Databse Insert query for getOdds";
+	
+	
+	
+	
+	
+}
+
+function create_odds_DMZ_Client($event)
+{
+	echo "GetOdds Before Creating DMZ Client";
+	$request = array();
+	echo "Request Array Created in create_odds_DMZ_Client Function";
+	$request['type'] = "GetOdds";
+	$request['eventID'] = $event;
+	$returnedValue = createDMZClient($request);
+	return var_dump($returnedValue);
+	echo "Back from DMZ\n";
+	echo "Returned to getOdds Function";
+	//return $returnedValue;
 }
 
 // Contact DMZ Server for Historical Statistics
