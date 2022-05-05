@@ -164,9 +164,12 @@ function getOdds()
 		
 		$returnValue = create_odds_DMZ_Client($event);
 		
-		echo $odds;
+		echo "returnValue:  ";
+		echo $returnValue;
 		$odds = $returnValue['results']['odds']['151_1'];
-			
+		echo "Odds:  ";
+		echo $odds;
+		
 		foreach($odds as $oddsvalue) 
 		{
 			$Home_Odds = $oddsvalue['home_od'];
