@@ -177,13 +177,13 @@ function getOdds()
 		{
 			$Home_Odds = $oddsvalue['home_od'];
 			echo "Type Odds Home:  ";
-			print_r(gettype($Home_Odds);
+			echo (gettype($Home_Odds));
 			echo "Home Odds:  ";
 			echo $Home_Odds;
 			
 			$Away_Odds = $oddsvalue['away_od'];
 			echo "Type Odds Away:  ";
-			print_r(gettype($Away_Odds);
+			print_r(gettype($Away_Odds));
 			echo "Away Odds:  ";
 			echo $Away_Odds;
 			
