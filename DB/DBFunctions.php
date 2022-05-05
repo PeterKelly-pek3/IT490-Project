@@ -245,7 +245,7 @@ function getHistStats()
 	{
         	foreach($value as $data)
 		{
-//            		echo "\n";
+//            		echo "\n"; 
             		$Name = $data['Name'];
 //            		echo "Name: ".$Name;
 //            		echo "\n";
