@@ -112,8 +112,6 @@ function getAPIConnection()
 	$returnedValue = createDMZClient($request);
 	var_dump($returnedValue);
 	
-	$request['type'] = "GetOdds";
-	$returnedodds = createDMZClient($request);
 
 	echo "Back from DMZ\n";
 	//return $returnedValue;
@@ -143,6 +141,7 @@ function getAPIConnection()
 			
 			$request['type'] = "GetOdds";
 			$request['eventID'] = $eventID;
+			echo "Before return odds DMZ client connection";
 			$returnedodds = createDMZClient($request);
 			var_dump($returnedodds);
 			
