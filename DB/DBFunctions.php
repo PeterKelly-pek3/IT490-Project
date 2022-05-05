@@ -169,7 +169,7 @@ function getOdds()
 
 		
 		
-		$odds = $returnValue['results']['odds'][0]['151_1'];
+		$odds = $returnValue['results']['odds']['151_1'];
 		echo "Odds:  ";
 		echo $odds;
 		
