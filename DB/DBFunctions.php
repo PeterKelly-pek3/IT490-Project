@@ -183,7 +183,7 @@ function getOdds()
 			$integerIDs = intval($strIDs);
 			print_r($event);
 			//$event = $event[EventID];
-			print_r(gettype($event));
+			print_r(gettype($integerIDs));
 			//echo $event;
 			
 			$query = "INSERT INTO LeagueData (Home_Odds, Away_Odds) VALUES ('$Home_Odds','$Away_Odds') WHERE eventID=$integerIDs ";
