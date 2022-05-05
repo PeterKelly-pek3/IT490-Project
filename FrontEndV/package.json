@@ -1,0 +1,21 @@
+{
+  "name": "html",
+  "version": "1.0.0",
+  "description": "Esports Chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "Dan C",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.1",
+    "monent": "0.0.2-security",
+    "socket.io": "^4.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

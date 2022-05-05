@@ -1,0 +1,85 @@
+<!-- IT490 Group Project - Team Degenerate Gamblers -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>League of Legends Gambling for Degenerates | Register</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+<body style="background-color:#222D32;">
+    <div class="container">
+        <div class="main">
+                    <h1 class="login-title">League of Legends Fantasy League</h1>
+            </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                
+                <div class="col-lg-12 login-title">
+                  USER  REGISTER
+                </div>
+             <!-- Register Start Here -->
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form>
+                            <!-- Firstname and Lastname -->
+                            <div class="form-group">
+                                <label class="form-control-label input-box">FIRST NAME</label>
+                                <input type="text" class="form-control" name = "firstname" id = "id_firstname" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label input-box">LAST NAME</label>
+                                <input type="text" class="form-control" name = "lastname" id = "id_lastname" required>
+                            </div>
+                            <!-- Username, Email and Phone -->
+                            <div class="form-group">
+                                <label class="form-control-label input-box">USER NAME</label>
+                                <input type="text" class="form-control" name = "username" id = "id_username" onblur="checkForExistingUsername()" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label input-box">EMAIL</label>
+                                <input type="text" class="form-control" name = "email" id = "id_email" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label input-box">PHONE</label>
+                                <input type="text" class="form-control" name = "phone" id = "id_phone" required>
+                            </div>
+                            <!-- Password and Password2 -->
+                            <div class="form-group">
+                                <label class="form-control-label">PASSWORD</label>
+                                <input type = "password" name = "password" id = "id_password" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">CONFIRM PASSWORD</label>
+                                <input type = "password" name = "conform_password" id = "id_confirm_password" class="form-control" required>
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text"> 
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="button" class="btn btn-outline-primary btn2" onclick = "checkRegisterCredentials()" id = "registerButtonId">REGISTER</button>
+                                </div>
+                                  <p class="login-btm login-text">If you have already member? <a href="login.html">Login Now</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+        <!-- Login End Here-->
+        <!-- JS Start Here -->
+        <script type="text/javascript" src="webScripts.js">
+        </script>
+
+        <!-- JS End Here -->
+</body>
+</html>
