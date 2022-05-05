@@ -27,7 +27,8 @@ function requestProcessor($request){
 			
 		// Get Odds
 		case "GetOdds":
-			$eventID = $request['eventID'];
+			$eventID = $request['eventID']['EventID'];
+			echo "EventID in DMZServer equals ".$eventID;
 			$response_msg = GetOdds($eventID);
 			break;
 
