@@ -179,12 +179,13 @@ function getOdds()
 			
 			$Away_Odds = $oddsvalue['away_od'];
 			
+			$integerIDs = array_map('intval', explode(',', $event));
 			print_r($event);
-			$event = $event[EventID];
-			echo gettype($event);
-			echo $event;
+			//$event = $event[EventID];
+			//echo gettype($event);
+			//echo $event;
 			
-			$query = "INSERT INTO LeagueData (Home_Odds, Away_Odds) VALUES ('$Home_Odds','$Away_Odds') WHERE eventID=$event ";
+			$query = "INSERT INTO LeagueData (Home_Odds, Away_Odds) VALUES ('$Home_Odds','$Away_Odds') WHERE eventID=$integerIDs ";
 			$result = $connection->query($query);
 		}
 		
