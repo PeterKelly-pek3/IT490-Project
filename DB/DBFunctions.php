@@ -179,7 +179,8 @@ function getOdds()
 			
 			$Away_Odds = $oddsvalue['away_od'];
 			
-			$integerIDs = array_map('intval', explode(',', $event));
+			$strIDs = implode($event);
+			$integerIDs = intval($strIDs);
 			print_r($event);
 			//$event = $event[EventID];
 			//echo gettype($event);
