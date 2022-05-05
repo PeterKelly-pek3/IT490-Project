@@ -195,7 +195,9 @@ function getOdds()
 			print_r($integerIDs);
 			//echo $event;
 			
-			$query = "INSERT INTO Data2 (Home_Odds, Away_Odds) VALUES ('$Away_Odds','$Home_Odds')"; // WHERE eventID='$integerIDs' ";
+			//$query = "INSERT INTO Data2 (Home_Odds, Away_Odds) VALUES ('$Away_Odds','$Home_Odds')"; // WHERE eventID='$integerIDs' ";\
+			//where eventID='$integerIDs' and Data2.reference_id=LeagueData.id a
+			$query = "INSERT INTO Data2 (Home_Odds, Away_Odds) VALUES ('$Away_Odds','$Home_Odds') where eventID='$integerIDs' and Data2.reference_id=LeagueData.id";
 			$result = $connection->query($query);
 		}
 		
