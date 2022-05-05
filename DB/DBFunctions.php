@@ -176,8 +176,12 @@ function getOdds()
 		foreach($odds as $oddsvalue) 
 		{
 			$Home_Odds = $oddsvalue['home_od'];
+			echo "Home Odds:  ";
+			echo $Home_Odds;
 			
 			$Away_Odds = $oddsvalue['away_od'];
+			echo "Away Odds:  ";
+			echo $Away_Odds;
 			
 			$strIDs = implode($event);
 			$integerIDs = intval($strIDs);
