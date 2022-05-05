@@ -49,7 +49,7 @@ else
 }
 
 //Test API Function
-function GetOdds()
+function GetOdds($eventID)
 {
 
 $curl = curl_init();
