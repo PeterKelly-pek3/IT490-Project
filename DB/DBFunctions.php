@@ -154,8 +154,7 @@ function getAPIConnection()
 			}
 				
 
-	   		$query = "INSERT INTO LeagueData VALUES ('$leaguename','$hometeam', '$awayteam', '$eventdate', '$eventID', '$Home_Odds', '$Away_Odds')";
-	   		$result = $connection->query($query);
+	   		$query = "INSERT INTO LeagueData (leaguename, hometeam, awayteam, eventdate, eventID) VALUES ('$leaguename','$hometeam', '$awayteam', '$eventdate', '$eventID')";
         	}
 	}
 
