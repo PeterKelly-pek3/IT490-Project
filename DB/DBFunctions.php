@@ -171,7 +171,7 @@ function getOdds()
 		//echo print_r($returnValue);
 		//$itHold++;
 		
-		$odds = $returnValue['results']['odds'];//['151_1'];
+		$odds = $returnValue['results']['odds']['151_1'];
 		//echo "Odds:  ";
 		//var_dump($odds);
 		
