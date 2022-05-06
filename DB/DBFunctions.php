@@ -163,7 +163,7 @@ function getOdds()
 	foreach ($result as $event) 
 	{
 		
-		echo "hello___first loop___";
+		echo "hello___first loop___\n";
 		print_r($event);
 		$returnValue = create_odds_DMZ_Client($event);
 		
@@ -176,21 +176,23 @@ function getOdds()
 		//echo "Odds:  ";
 		//print_r($odds);
 		
-		foreach($odds as $oddsvalue) 
+		foreach($oddsvalue as $odds) 
 		{
-			echo "WASSUP__ SECOND LOOP";
+			echo "WASSUP__ SECOND LOOP\n";
 			
 			$Home_Odds = $oddsvalue['home_od'];
 			echo "Type Odds Home:  ";
 			echo (gettype($Home_Odds));
 			echo "Home Odds:  ";
 			echo $Home_Odds;
+			echo "\n";
 			
 			$Away_Odds = $oddsvalue['away_od'];
 			echo "Type Odds Away:  ";
 			print_r(gettype($Away_Odds));
 			echo "Away Odds:  ";
 			echo $Away_Odds;
+			echo "\n";
 			
 			$strIDs = implode($event);
 			$integerIDs = intval($strIDs);
