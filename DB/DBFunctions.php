@@ -164,7 +164,7 @@ function getOdds()
 	{
 		
 		echo "hello___first loop___";
-		echo $event;
+		echo print_r($event);
 		$returnValue = create_odds_DMZ_Client($event);
 		
 		//echo "returnValue:  ";
