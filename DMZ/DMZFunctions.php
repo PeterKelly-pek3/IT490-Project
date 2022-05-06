@@ -55,7 +55,6 @@ function GetOdds($eventID)
 $curl = curl_init();
 
 curl_setopt_array($curl, [
-    echo "DMZ FUNCTION:  ".$eventID;
     CURLOPT_URL => "https://api.b365api.com/v2/event/odds?token=115215-MDpRLi6nUUlglr&event_id=".$eventID,
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_FOLLOWLOCATION => true,
@@ -66,6 +65,7 @@ curl_setopt_array($curl, [
     CURLOPT_CUSTOMREQUEST => "GET",
 
 ]);
+echo "DMZ FUNCTION:  ".$eventID
 	
 $response = curl_exec($curl);
 $err = curl_error($curl);
