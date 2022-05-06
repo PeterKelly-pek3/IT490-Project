@@ -65,7 +65,7 @@ curl_setopt_array($curl, [
     CURLOPT_CUSTOMREQUEST => "GET",
 
 ]);
-echo "DMZ FUNCTION:  ".$eventID
+echo "DMZ FUNCTION:  ".$eventID;
 	
 $response = curl_exec($curl);
 $err = curl_error($curl);
