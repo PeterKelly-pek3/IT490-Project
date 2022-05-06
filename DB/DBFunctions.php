@@ -170,11 +170,11 @@ function getOdds()
 		//echo print_r($returnValue);
 		//$itHold++;
 		
-		$odds = $returnValue['results']['odds']['151_1'];
+		//$odds = $returnValue['results']['odds']['151_1'];
 		//echo "Odds:  ";
 		//var_dump($odds);
 		
-		foreach($odds as $oddsvalue) 
+		foreach($returnValue['results']['odds']['151_1'] as $oddsvalue) 
 		{
 			//echo "WASSUP__ SECOND LOOP\n";
 			
