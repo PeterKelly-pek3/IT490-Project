@@ -159,12 +159,11 @@ function getOdds()
 	$result = $connection->query($sql);
 	
 	
-	//$itHold=-1;
 	foreach ($result as $event) 
 	{
 		
-		echo "hello___first loop___\n";
-		print_r($event);
+		//echo "hello___first loop___\n";
+		//print_r($event);
 		$returnValue = create_odds_DMZ_Client($event);
 		
 		//echo "returnValue:  ";
@@ -177,28 +176,28 @@ function getOdds()
 		
 		foreach($odds as $oddsvalue) 
 		{
-			echo "WASSUP__ SECOND LOOP\n";
+			//echo "WASSUP__ SECOND LOOP\n";
 			
 			$Home_Odds = $oddsvalue['home_od'];
-			echo "Type Odds Home:  ";
-			echo (gettype($Home_Odds));
-			echo "Home Odds:  ";
-			echo $Home_Odds;
-			echo "\n";
+			//echo "Type Odds Home:  ";
+			//echo (gettype($Home_Odds));
+			//echo "Home Odds:  ";
+			//echo $Home_Odds;
+			//echo "\n";
 			
 			$Away_Odds = $oddsvalue['away_od'];
-			echo "Type Odds Away:  ";
-			print_r(gettype($Away_Odds));
-			echo "Away Odds:  ";
-			echo $Away_Odds;
-			echo "\n";
+			//echo "Type Odds Away:  ";
+			//print_r(gettype($Away_Odds));
+			//echo "Away Odds:  ";
+			//echo $Away_Odds;
+			//echo "\n";
 			
 			$strIDs = implode($event);
 			$integerIDs = intval($strIDs);
-			print_r($event);
+			//print_r($event);
 			//$event = $event[EventID];
-			print_r(gettype($integerIDs));
-			print_r($integerIDs);
+			//print_r(gettype($integerIDs));
+			//print_r($integerIDs);
 			//echo $event;
 			
 			$query = "UPDATE LeagueData SET Home_Odds='$Home_Odds', Away_Odds='$Away_Odds' WHERE eventID='$integerIDs'";
