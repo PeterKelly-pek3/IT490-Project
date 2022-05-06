@@ -157,6 +157,9 @@ function getOdds()
 	echo "DB Connection est.\n";
 	$sql = "SELECT EventID FROM LeagueData";
 	$result = $connection->query($sql);
+	echo "SQL SELECT EVENTID RESULT:   ";
+	print_r($result);
+	print_r(gettype($result));
 	
 	
 	foreach ($result as $event) 
