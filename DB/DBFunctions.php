@@ -158,16 +158,19 @@ function getOdds()
 	$sql = "SELECT EventID FROM LeagueData";
 	$result = $connection->query($sql);
 	
+	
+	//$itHold=-1;
 	foreach ($result as $event) 
 	{
 		
-		echo "hello___first loop";
+		echo "hello___first loop___";
+		echo $event;
 		$returnValue = create_odds_DMZ_Client($event);
 		
 		//echo "returnValue:  ";
 		//echo print_r($returnValue);
 
-		
+		//$itHold++;
 		
 		$odds = $returnValue['results']['odds']['151_1'];
 		//echo "Odds:  ";
@@ -176,6 +179,7 @@ function getOdds()
 		foreach($odds as $oddsvalue) 
 		{
 			echo "WASSUP__ SECOND LOOP";
+			
 			$Home_Odds = $oddsvalue['home_od'];
 			echo "Type Odds Home:  ";
 			echo (gettype($Home_Odds));
