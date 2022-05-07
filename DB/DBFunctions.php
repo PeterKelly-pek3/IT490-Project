@@ -176,7 +176,7 @@ function getOdds()
 		//echo "Odds:  ";
 		//var_dump($odds);
 		
-		$number = '1';
+		$number = 1;
 		
 		foreach($returnValue['results']['odds']['151_'.$number] as $oddsvalue) 
 		{
