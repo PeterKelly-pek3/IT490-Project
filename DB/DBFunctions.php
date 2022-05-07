@@ -176,10 +176,12 @@ function getOdds()
 		//echo "Odds:  ";
 		//var_dump($odds);
 		
-		foreach($returnValue['results']['odds']['151_1'] as $oddsvalue) 
+		$number = '1';
+		
+		foreach($returnValue['results']['odds']['151_'.$number] as $oddsvalue) 
 		{
 			//echo "WASSUP__ SECOND LOOP\n";
-			
+			$number++;
 			$Home_Odds = $oddsvalue['home_od'];
 			echo "Type Odds Home:  ";
 			echo (gettype($Home_Odds));
