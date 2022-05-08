@@ -97,6 +97,11 @@ function requestProcessor($request)
             		echo "chooseTeam\n";
             		$response_msg = chooseTeam($request['teamname']);
            		break;
+			
+		case "getRankings":
+            		echo "getRankings\n";
+            		$response_msg = getRankings();
+            		break;
 	}
 	return $response_msg;
 }
