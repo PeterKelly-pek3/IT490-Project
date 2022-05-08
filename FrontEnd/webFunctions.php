@@ -175,4 +175,31 @@ function getGroups($username)
 	
 	
 }
+
+function chooseTeam($teamname)
+{
+    $request = array();
+
+    $request['type'] = "chooseTeam";
+
+    $request['teamname'] = $teamname;
+
+    $returnedValue = createClientForDb($request);
+
+    return $returnedValue;
+
+
+}
+function getRankings()
+{
+    $request = array();
+
+    $request['type'] = "getRankings";
+
+    $returnedValue = createClientForDb($request);
+
+    return $returnedValue;
+
+
+}
 ?>
