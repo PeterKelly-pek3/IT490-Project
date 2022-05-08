@@ -453,6 +453,40 @@ function getGroups($username)
 	
 	
 }
+
+function chooseTeam($teamname)
+{
+    $connection = dbConnection();
+    $chooseTeam_query = "INSERT INTO RecruitTable (players, Eteam) VALUES ('$username', '$teamname')";
+    $connection->query($chooseTeam_query);
+
+    $result = $teamname." Chosen";
+    return $result;
+
+}
+
+function getRankings()
+{
+    $connection = dbConnection();
+    $sql = "SELECT Name FROM HistoricalData by trimWin_rate DESC";
+    $result = $connection->query($sql);
+
+    $all_info = [];
+    if ($result->num_rows > 0) {
+        // output data of each row
+
+        while($row = $result->fetch_assoc()) {
+            $name = $row["Name"];
+            echo $name;
+
+
+            $team_rankings = array("Name"=>$name);
+            array_push($all_info, $team_rankings);
+
+        }
+        echo print_r($all_info);
+        return $all_info;
+ }
 	 
 
 ?>
