@@ -92,6 +92,11 @@ function requestProcessor($request)
 			echo "getGroups\n";
 			$response_msg = getGroups($request['username']);
 			break;
+			
+		case "chooseTeam":
+            		echo "chooseTeam\n";
+            		$response_msg = chooseTeam($request['teamname']);
+           		break;
 	}
 	return $response_msg;
 }
