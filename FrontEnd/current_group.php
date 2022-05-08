@@ -52,21 +52,46 @@ if (isset($_POST['getGroups']))
 	echo($response);
 	print_r($response);
 }
+
+if (isset($_POST['chooseTeam'])) {
+    $teamname = $_REQUEST['team'];
+    $response = chooseTeam($teamname);
+    echo($response);
+    print_r($response);
+}
+
+$response = getRankings();
+echo($response);
 ?>
 
 
 <DOCTYPE! html>
- <head>
-  <title>Current Groups</title>
- </head>
-  <h2>This is the groups that are avaible.</h2>
-	<form action="current_group.php" method="post">		
-    		<h5>Show Group and Players</h5>
-			<label for="username">Enter Username:</label><br />
-    			<input id="username" name="username" type="text" value="" />
-    			<p><button type="submit" name="getGroups">Recruit Group</button></p>
-	</form>
- <body>
+<head>
+    <title>Current Groups</title>
+</head>
+<h2>Get Your Group</h2>
+<form action="current_group.php" method="post">
+    <h3>Show Group and Players</h3>
+    <label for="username">Enter Username:</label><br/>
+    <input id="username" name="username" type="text" value=""/>
+    <p>
+        <button type="submit" name="getGroups">Recruit Group</button>
+    </p>
+</form>
+<h4>Choose Esports Team</h4>
+<form action="current_group.php" method="post">
+    <h5>Show Group and Players</h5>
+    <label for="team">Enter Team Name:</label><br/>
+    <input id="team" name="team" type="text" value=""/>
+    <p>
+        <button type="submit" name="chooseTeam">Choose Team</button>
+    </p>
+</form>
+<h4>Show Top Winners</h4>
+<button type="submit" name="chooseTeam">Show Rankings Based on Performance</button>
 
- </body>
+<body>
+
+
+</body>
 </html>
