@@ -96,7 +96,8 @@ if (isset($_POST['test_api']))
 }
 
 // Create User Groups
-if (isset($_POST['create_group']))
+
+function create_group($groupname, $groupkey)
 {
 	$request = array();
 
