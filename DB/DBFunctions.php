@@ -345,7 +345,7 @@ function groupjoin($gkey, $username){
 			$selectgroupname_query = "SELECT uname FROM CreateGroups WHERE code='$gkey'";
     	 		$result = $connection->query($selectgroupname_query);
 			$fetch_teamname = mysqli_fetch_assoc($result);
-			$uname = strval($fetch_teamname);
+			$uname = strval($fetch_teamname["uname"]);
 	 		$result2 = $username." joined group: ".$uname;
     			return $result2;
         
