@@ -454,13 +454,13 @@ function getGroups($username)
 	
 }
 
-function chooseTeam($teamname)
+function chooseTeam($username, $teamname)
 {
     $connection = dbConnection();
-    $chooseTeam_query = "INSERT INTO RecruitTable (players, Eteam) VALUES ('$username', '$teamname')";
+    $chooseTeam_query = "INSERT INTO RecruitTable (players, EsportsTeam) VALUES ('$username', '$teamname')";
     $connection->query($chooseTeam_query);
 
-    $result = $teamname." Chosen";
+    $result = $teamname." Esports Team Recruited.";
     return $result;
 
 }
