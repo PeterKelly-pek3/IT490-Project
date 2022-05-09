@@ -176,13 +176,14 @@ function getGroups($username)
 	
 }
 
-function chooseTeam($teamname)
+function chooseTeam($username, $teamname)
 {
     $request = array();
 
     $request['type'] = "chooseTeam";
 
     $request['teamname'] = $teamname;
+    $request['username'] = $username;
 
     $returnedValue = createClientForDb($request);
 
