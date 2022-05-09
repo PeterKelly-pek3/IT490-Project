@@ -342,11 +342,11 @@ function groupjoin($gkey, $username){
 	 		$joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey')";
     	 		$result = $connection->query($joingroup_query);
 	 		echo "GOOD FUCKING JOB DUMB FUCK";
-			$selectgroupname_query = "SELECT uname FROM CreateGroups WHERE code=$gkey";
+			$selectgroupname_query = "SELECT uname FROM CreateGroups WHERE code='$gkey'";
     	 		$result = $connection->query($selectgroupname_query);
 			$uname = strval($result);
-	 		$result = $username." joined group: ".$uname;
-    			return $result;
+	 		$result2 = $username." joined group: ".$uname;
+    			return $result2;
         
     	    	}    
 	    }
