@@ -114,7 +114,7 @@ function create_group($groupname, $groupkey)
 
 }
 // Join User Groups
-if (isset($_POST['groupjoin']))
+function groupjoin($username, $gkey)
 {
     $request = array();
 
