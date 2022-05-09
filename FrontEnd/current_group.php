@@ -60,17 +60,17 @@ if (isset($_POST['chooseTeam'])) {
     print_r($response);
 }
 
-$response = getRankings();
-echo($response);
+//$response = getRankings();
+//echo($response);
 
-$odds_response = TeamToBetOn();
+//$odds_response = TeamToBetOn();
 
-if (is_null($odds_response)) 
-{
-	echo "<h5>Choose Team to Bet On</h5>"
-	echo $odds_response;
+//if (is_null($odds_response)) 
+//{
+//	echo "<h5>Choose Team to Bet On</h5>"
+//	echo $odds_response;
 	
-}
+//}
 
 
 ?>
