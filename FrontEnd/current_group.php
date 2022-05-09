@@ -62,8 +62,22 @@ if (isset($_POST['chooseTeam'])) {
 
 if (isset($_POST['Get_Rankings'])) {
   
-    $response = getRankings();
-    print_r($response);
+        $response = getRankings();
+	$num = 1;
+	foreach($response as $data) {
+            
+            echo "<br>";
+            $Name = $data['Name'];
+            echo $num." : ".$Name;
+            echo "<br>";
+	    $num++;
+            
+            break;
+            
+        }
+            
+    }
+   
 }
 
 
