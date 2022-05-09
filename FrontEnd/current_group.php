@@ -57,7 +57,6 @@ if (isset($_POST['chooseTeam'])) {
     $teamname = $_REQUEST['team'];
     $username = $_REQUEST['username'];
     $response = chooseTeam($username, $teamname);
-    echo($response);
     print_r($response);
 }
 
