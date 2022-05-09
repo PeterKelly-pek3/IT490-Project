@@ -21,6 +21,14 @@ ini_set('display_errors', 'Off');
 ini_set('log_errors', 'On');
 ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/errLog.txt');
 
+if (isset($_POST['create_group']))
+{
+	$username = $_REQUEST['groupname'];
+	$gkey = $_REQUEST['groupkey']
+	$response = create_group($username, $gkey);
+	echo($response);
+	print_r($response);
+}
 
 ?>
 
