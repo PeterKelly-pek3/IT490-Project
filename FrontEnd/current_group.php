@@ -60,8 +60,14 @@ if (isset($_POST['chooseTeam'])) {
     print_r($response);
 }
 
-//$response = getRankings();
-//echo($response);
+if (isset($_POST['Get_Rankings'])) {
+  
+    $response = getRankings();
+    print_r($response);
+}
+
+
+
 
 //$odds_response = TeamToBetOn();
 
@@ -101,8 +107,9 @@ if (isset($_POST['chooseTeam'])) {
     </p>
 </form>
 <h5>Show Top Winners</h5>
-<button type="submit" name="chooseTeam">Show Rankings Based on Performance</button>
-	
+<form action="current_group.php" method="post">	
+	<button type="submit" name="Get_Rankings">Show Rankings Based on Performance</button>
+</form>	
 
 
 <body>
