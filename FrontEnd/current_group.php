@@ -55,7 +55,8 @@ if (isset($_POST['getGroups']))
 
 if (isset($_POST['chooseTeam'])) {
     $teamname = $_REQUEST['team'];
-    $response = chooseTeam($teamname);
+    $username = $_REQUEST['username'];
+    $response = chooseTeam($username, $teamname);
     echo($response);
     print_r($response);
 }
@@ -89,11 +90,13 @@ if (isset($_POST['chooseTeam'])) {
         <button type="submit" name="getGroups">Recruit Group</button>
     </p>
 </form>
-<h4>Choose Esports Team</h4>
+<h4>Recruit Your Esports Team</h4>
 <form action="current_group.php" method="post">
     <h5>Show Group and Players</h5>
     <label for="team">Enter Team Name:</label><br/>
     <input id="team" name="team" type="text" value=""/>
+    <label for="username">Enter Username:</label><br/>
+    <input id="team" name="username" type="text" value=""/>
     <p>
         <button type="submit" name="chooseTeam">Choose Team</button>
     </p>
