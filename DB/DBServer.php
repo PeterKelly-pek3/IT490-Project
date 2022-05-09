@@ -102,6 +102,11 @@ function requestProcessor($request)
             		echo "getRankings\n";
             		$response_msg = getRankings();
             		break;
+			
+		case "TeamToBetOn":
+            		echo "TeamToBetOn\n";
+            		$response_msg = TeamToBetOn();
+            		break;
 	}
 	return $response_msg;
 }
