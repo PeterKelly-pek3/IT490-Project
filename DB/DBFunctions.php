@@ -495,7 +495,8 @@ function TeamToBetOn()
     $result = $connection->query($sql);
 
     $all_info = [];
-    if ($result->num_rows > 0) {
+    if ($result->num_rows > 0) 
+    {
         // output data of each row
 
         while($row = $result->fetch_assoc()) {
@@ -515,6 +516,7 @@ function TeamToBetOn()
         }
         echo print_r($all_info);
         return $all_info;
+     }
  }
 
 ?>
