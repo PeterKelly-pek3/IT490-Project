@@ -345,7 +345,7 @@ function groupjoin($gkey, $username){
 			$selectgroupname_query = "SELECT uname FROM CreateGroups WHERE code=$gkey";
     	 		$result = $connection->query($selectgroupname_query);
 			$uname = strval($result);
-	 		$result = $username." joined group: ".$result;
+	 		$result = $username." joined group: ".$uname;
     			return $result;
         
     	    	}    
