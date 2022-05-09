@@ -305,17 +305,20 @@ function getHistStats()
 function groupsubmit($groupname, $groupkey)
 {
 	
-    $connection = dbConnection();
+    	$connection = dbConnection();
 	echo "Connected to Database";
 	
 
    
-    $newgroup_query = "INSERT INTO CreateGroups VALUES ('$groupname', '$groupkey')";
+    	$newgroup_query = "INSERT INTO CreateGroups VALUES ('$groupname', '$groupkey')";
 	echo "Query Created";
-    $result = $connection->query($newgroup_query);
+    	$result = $connection->query($newgroup_query);
 	echo "INserted into Database";
+	
+	$result = $groupname." Group has been created with Group Key of: ".$groupkey;
+    	return $result;
     
-    return true;
+    
 
 
 }
@@ -339,7 +342,10 @@ function groupjoin($gkey, $username){
 	 		$joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey')";
     	 		$result = $connection->query($joingroup_query);
 	 		echo "GOOD FUCKING JOB DUMB FUCK";
-	 		return true;
+			$selectgroupname_query = "SELECT uname FROM CreateGroups WHERE code=$gkey";
+    	 		$result = $connection->query($selectgroupname_query);
+	 		$result = $username." joined group: ".$result;
+    			return $result;
         
     	    	}    
 	    }
