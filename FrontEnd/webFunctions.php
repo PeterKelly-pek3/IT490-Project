@@ -202,4 +202,17 @@ function getRankings()
 
 
 }
+
+function TeamToBetOn()
+{
+    $request = array();
+
+    $request['type'] = "TeamToBetOn";
+
+    $returnedValue = createClientForDb($request);
+
+    return $returnedValue;
+
+
+}
 ?>
