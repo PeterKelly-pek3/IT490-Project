@@ -486,6 +486,7 @@ function getRankings()
         }
         echo print_r($all_info);
         return $all_info;
+    }
  }
 	 
 function TeamToBetOn()
