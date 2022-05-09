@@ -460,7 +460,7 @@ function chooseTeam($username, $teamname)
     $chooseTeam_query = "INSERT INTO RecruitTable (players, EsportsTeam) VALUES ('$username', '$teamname')";
     $connection->query($chooseTeam_query);
 
-    $result = $teamname." Esports Team Recruited.";
+    $result = $teamname." Esports Team Recruited For ".$username;
     return $result;
 
 }
