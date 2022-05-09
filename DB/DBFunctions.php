@@ -488,6 +488,34 @@ function getRankings()
         return $all_info;
  }
 	 
+function TeamToBetOn()
+{
+    $connection = dbConnection();
+    $sql = "SELECT hometeam, awayteam, Home_Odds, Away_Odds FROM LeagueData";
+    $result = $connection->query($sql);
+
+    $all_info = [];
+    if ($result->num_rows > 0) {
+        // output data of each row
+
+        while($row = $result->fetch_assoc()) {
+            $hometeam = $row["hometeam"];
+            echo $hometeam;
+	    $name = $row["awayteam"];
+            echo $awayteam;
+	    $name = $row["Home_Odds"];
+            echo $Home_Odds;
+	    $name = $row["Away_Odds"];
+            echo $Away_Odds;
+
+
+            $betting_odds = array("hometeam"=>$hometeam, "awayteam"=>$awayteam, "Home_Odds"=>$Home_Odds, "Away_Odds"=>$Away_Odds);
+            array_push($all_info, $betting_odds);
+
+        }
+        echo print_r($all_info);
+        return $all_info;
+ }
 
 ?>
 
