@@ -344,7 +344,8 @@ function groupjoin($gkey, $username){
 	 		echo "GOOD FUCKING JOB DUMB FUCK";
 			$selectgroupname_query = "SELECT uname FROM CreateGroups WHERE code='$gkey'";
     	 		$result = $connection->query($selectgroupname_query);
-			$uname = strval($result);
+			$fetch_teamname = mysqli_fetch_assoc($result);
+			$uname = strval($fetch_teamname);
 	 		$result2 = $username." joined group: ".$uname;
     			return $result2;
         
