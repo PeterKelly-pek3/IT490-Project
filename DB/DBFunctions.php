@@ -543,7 +543,7 @@ function AddToBettingHistory($username, $hometeam, $awayteam, $teambet)
 function ShowHistoryBets()
 {
 	$connection = dbConnection();
-    	$sql = "SELECT Username, Hometeam, Awayteam, teambet, Won_or_Loss, Betting_Score FROM Betting_History";
+    	$sql = "SELECT Username, Hometeam, Awayteam, teambet, Won_or_Loss, Betting_Score, betDate FROM Betting_History";
     	$result = $connection->query($sql);
 	
 	$all_info = [];
