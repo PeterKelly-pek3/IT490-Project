@@ -106,6 +106,7 @@ if (isset($_POST['TeamToBetOn'])) {
 		echo	"<button type='submit' name='postBet'>".$hometeam."</button>";
 		echo "<br>";    
 		echo	"<button type='submit' name='postBet'>".$awayteam."</button>";
+		echo "<br>";   
             
 	    }
             
