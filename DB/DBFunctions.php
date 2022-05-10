@@ -529,9 +529,9 @@ function TeamToBetOn()
 
 function AddToBettingHistory($username, $hometeam, $awayteam, $teambet)
 {
-	//$connection = dbConnection();
-    	//$EnterBettingHistory_query = "INSERT INTO Betting_History (Username, Hometeam, Awayteam, teambet) VALUES ('$username', '$hometeam', '$awayteam', '$teambet')";
-    	//$connection->query($EnterBettingHistory_query);
+	$connection = dbConnection();
+    	$EnterBettingHistory_query = "INSERT INTO Betting_History (Username, Hometeam, Awayteam, teambet) VALUES ('$username', '$hometeam', '$awayteam', '$teambet')";
+    	$connection->query($EnterBettingHistory_query);
 	
 	$result = $username." has placed a bet for ".$teambet;
     	return $result;
