@@ -40,7 +40,7 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 		
 #	} 
 #	else{
-#		echo 'No luck try again.';
+#		echo 'FUCK YOU, GOT NO FRIENDS OR BITCHES.';
 #	}
 #}'
 #}
@@ -55,13 +55,135 @@ if (isset($_POST['getGroups']))
 
 if (isset($_POST['chooseTeam'])) {
     $teamname = $_REQUEST['team'];
-    $response = chooseTeam($teamname);
-    echo($response);
+    $username = $_REQUEST['username'];
+    $response = chooseTeam($username, $teamname);
     print_r($response);
 }
 
-$response = getRankings();
-echo($response);
+if (isset($_POST['Get_Rankings'])) {
+  
+        $response = getRankings();
+	$num = 1;
+	foreach($response as $data) {
+            
+            echo "<br>";
+            $Name = $data['Name'];
+            echo $num." : ".$Name;
+            echo "<br>";
+	    $num++;
+            
+            
+            
+        }
+            
+    
+   
+}
+
+
+if (isset($_POST['HomeTeamBet'])) {
+	
+	$username = $_REQUEST['username'];
+	$hometeam = $_REQUEST['hometeam'];
+	$awayteam = $_REQUEST['awayteam'];
+	$teambet = $hometeam;
+	$response = AddtoBettingHistory($username, $hometeam, $awayteam, $teambet);
+	echo $response;
+	
+}
+
+if (isset($_POST['AwayTeamBet'])) {
+	
+	$username = $_REQUEST['username'];
+	$hometeam = $_REQUEST['hometeam'];
+	$awayteam = $_REQUEST['awayteam'];
+	$teambet = $awayteam;
+	$response = AddtoBettingHistory($username, $hometeam, $awayteam, $teambet);
+	echo $response;
+	
+}
+
+if (isset($_POST['ShowHistoryBets'])) {
+	
+	
+	$response = ShowHistoryBets();
+	foreach($response as $data) {
+            
+            echo "<br>";
+            $username = $data['Username'];
+            echo "Username: ".$username;
+            echo "<br>";
+	    $hometeam = $data['Hometeam'];
+	    $awayteam = $data['Awayteam'];
+            echo "Match: ".$hometeam." VS ".$awayteam;
+            echo "<br>";
+	    $teambet = $data['teambet'];
+	    $betDate = $data['betDate'];
+            echo "Bet Placed For Team ".$teambet." On ".$betDate;
+            echo "<br>";
+	    $bettingscore = $data['Betting_Score'];
+	    echo "Amount of Bets Won By ".$username." : ".$bettingscore;
+	    echo "<br>";
+	    echo "<br>";
+		
+	    
+            
+            
+            
+        }
+
+	
+}
+
+if (isset($_POST['TeamToBetOn'])) {
+	
+	$odds_response = TeamToBetOn();
+	foreach($odds_response as $data) {
+            if (isset($data['Home_Odds'])) {
+		    
+		
+            	echo "<br>";
+            	$hometeam = $data['hometeam'];
+            	echo "Home Team: ".$hometeam;
+            	echo "<br>";
+	    	$awayteam = $data['awayteam'];
+            	echo "Away Team: ".$awayteam;
+            	echo "<br>";
+	    	$Home_Odds = $data['Home_Odds'];
+            	echo "Home Odds: ".$Home_Odds;
+            	echo "<br>";
+	    	$Away_Odds = $data['Away_Odds'];
+            	echo "Away Odds: ".$Away_Odds;
+            	echo "<br>";
+		
+		echo "<h6>Choose Your Bet For This Match</h6>";
+		echo "<form action='current_group.php' method='post'>";
+		echo "<label for='username'>Enter Username:</label><br/>";
+		echo "<br>";
+		echo "<input id='username' name='username' type='text' value=''/>";
+		echo " <input type='hidden' id='hometeam' name='hometeam' value='".$hometeam."'>";
+		echo " <input type='hidden' id='awayteam' name='awayteam' value='".$awayteam."'>";
+		echo " <button type='submit' name='HomeTeamBet'>".$hometeam."</button>";
+		echo "</form>";
+		echo "<br>";  
+		echo "<form action='current_group.php' method='post'>";
+		echo "<label for='username'>Enter Username:</label><br/>";
+		echo "<br>";
+		echo "<input id='username' name='username' type='text' value=''/>";
+		echo " <input type='hidden' id='hometeam' name='hometeam' value='".$hometeam."'>";
+		echo " <input type='hidden' id='awayteam' name='awayteam' value='".$awayteam."'>";
+		echo	"<button type='submit' name='AwayTeamBet'>".$awayteam."</button>";
+		echo "</form>";
+		echo "<br>";   
+            
+	    }
+            
+        }
+       
+      
+}
+
+
 ?>
 <DOCTYPE! html>
  <head>
@@ -158,6 +280,3 @@ echo($response);
 </body>
 
 </html>
-
-
-
