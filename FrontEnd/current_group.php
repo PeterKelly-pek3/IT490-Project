@@ -83,10 +83,10 @@ if (isset($_POST['Get_Rankings'])) {
 if (isset($_POST['TeamToBetOn'])) {
 	
 	$odds_response = TeamToBetOn();
-	print_r($odds_response);
 	foreach($odds_response as $data) {
             if (isset($data['Home_Odds'])) {
 		    
+		echo "<h6>Show Available Upcoming Games to Bet On</h6>"
             	echo "<br>";
             	$hometeam = $data['hometeam'];
             	echo "Home Team: ".$hometeam;
