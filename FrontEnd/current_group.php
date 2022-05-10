@@ -83,11 +83,7 @@ if (isset($_POST['Get_Rankings'])) {
 if (isset($_POST['TeamToBetOn'])) {
 	
 	$odds_response = TeamToBetOn();
-	if (is_null($odds_response)) 
-	{
-		print_r($odds_response);
-	
-	}
+	print_r($odds_response);
        
             
     
