@@ -111,6 +111,11 @@ function requestProcessor($request)
 			echo "AddToBettingHistory\n";
 			$response_msg = AddToBettingHistory($request['username'], $request['hometeam'], $request['awayteam'], $request['teambet']);
 			break;
+		case "ShowHistoryBets":
+			echo "ShowHistoryBets\n";
+			$response_msg = ShowHistoryBets();
+			break;
+			
 	}
 	return $response_msg;
 }
