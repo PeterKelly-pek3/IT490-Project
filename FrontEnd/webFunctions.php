@@ -217,4 +217,23 @@ function TeamToBetOn()
 
 
 }
+function AddtoBettingHistory($username, $hometeam, $awayteam, $teambet)
+{
+	$request = array();
+	
+	$request['type'] = "AddtoBettingHistory";
+	$request['username'] = $username;
+	$request['hometeam'] = $hometeam;
+	$request['awayteam'] = $awayteam;
+	$request['teambet'] = $teambet;
+	
+	$returnedValue = createClientForDb($request);
+
+    	return $returnedValue;
+	
+	
+	
+	
+	
+}
 ?>
