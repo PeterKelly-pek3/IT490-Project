@@ -40,7 +40,7 @@ ini_set('error_log', '/home/testserver/git/rabbitmqphp_example/FrontEnd/Logs/err
 		
 #	} 
 #	else{
-#		echo 'FUCK YOU, GOT NO FRIENDS OR BITCHES.';
+#		echo 'No luck try again.';
 #	}
 #}'
 #}
