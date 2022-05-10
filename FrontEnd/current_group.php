@@ -86,7 +86,7 @@ if (isset($_POST['TeamToBetOn'])) {
 	foreach($odds_response as $data) {
             if (isset($data['Home_Odds'])) {
 		    
-		echo "<h6>Show Available Upcoming Games to Bet On</h6>"
+		
             	echo "<br>";
             	$hometeam = $data['hometeam'];
             	echo "Home Team: ".$hometeam;
@@ -100,6 +100,12 @@ if (isset($_POST['TeamToBetOn'])) {
 	    	$Away_Odds = $data['Away_Odds'];
             	echo "Away Odds: ".$Away_Odds;
             	echo "<br>";
+		
+		echo "<h6>Choose Your Bet For This Match</h6>";
+		echo "<form action='current_group.php' method='post'>";
+		echo	"<button type='submit' name='postBet'>".$hometeam"</button>";
+		echo "<br>";    
+		echo	"<button type='submit' name='postBet'>".$awayteam"</button>";
             
 	    }
             
