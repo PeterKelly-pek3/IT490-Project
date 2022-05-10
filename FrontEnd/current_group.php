@@ -103,9 +103,9 @@ if (isset($_POST['TeamToBetOn'])) {
 		
 		echo "<h6>Choose Your Bet For This Match</h6>";
 		echo "<form action='current_group.php' method='post'>";
-		echo	"<button type='submit' name='postBet'>".$hometeam"</button>";
+		echo	"<button type='submit' name='postBet'>".$hometeam."</button>";
 		echo "<br>";    
-		echo	"<button type='submit' name='postBet'>".$awayteam"</button>";
+		echo	"<button type='submit' name='postBet'>".$awayteam."</button>";
             
 	    }
             
