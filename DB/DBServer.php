@@ -107,7 +107,7 @@ function requestProcessor($request)
             		echo "TeamToBetOn\n";
             		$response_msg = TeamToBetOn();
             		break;
-		case "AddToBettingHistory":
+		case "AddtoBettingHistory":
 			echo "AddToBettingHistory\n";
 			$response_msg = AddToBettingHistory($request['username'], $request['hometeam'], $request['awayteam'], $request['teambet']);
 			break;
