@@ -510,11 +510,11 @@ function TeamToBetOn()
         while($row = $result->fetch_assoc()) {
             $hometeam = $row["hometeam"];
             echo $hometeam;
-	    $name = $row["awayteam"];
+	    $awayteam = $row["awayteam"];
             echo $awayteam;
-	    $name = $row["Home_Odds"];
+	    $Home_Odds = $row["Home_Odds"];
             echo $Home_Odds;
-	    $name = $row["Away_Odds"];
+	    $Away_Odds = $row["Away_Odds"];
             echo $Away_Odds;
 
 
