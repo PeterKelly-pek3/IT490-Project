@@ -236,4 +236,15 @@ function AddtoBettingHistory($username, $hometeam, $awayteam, $teambet)
 	
 	
 }
+
+function ShowHistoryBets()
+{
+    $request = array();
+
+    $request['type'] = "ShowHistoryBets";
+
+    $returnedValue = createClientForDb($request);
+
+    return $returnedValue;
+}
 ?>
