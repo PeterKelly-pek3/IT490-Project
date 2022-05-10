@@ -111,17 +111,21 @@ if (isset($_POST['ShowHistoryBets'])) {
             
             echo "<br>";
             $username = $data['Username'];
-            echo $username;
+            echo "Username: ".$username;
             echo "<br>";
 	    $hometeam = $data['Hometeam'];
-            echo $hometeam;
-            echo "<br>";
 	    $awayteam = $data['Awayteam'];
-            echo $awayteam;
+            echo "Match: ".$hometeam." VS ".$awayteam;
             echo "<br>";
 	    $teambet = $data['teambet'];
-            echo $teambet;
+	    $betDate = $data['betDate'];
+            echo "Bet Placed For Team ".$teambet." On ".$betDate;
             echo "<br>";
+	    $bettingscore = $data['Betting_Score'];
+	    echo "Amount of Bets Won By ".$username." : ".$bettingscore;
+	    echo "<br>";
+	    echo "<br>";
+		
 	    
             
             
