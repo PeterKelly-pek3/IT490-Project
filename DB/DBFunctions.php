@@ -530,7 +530,8 @@ function TeamToBetOn()
 function AddToBettingHistory($username, $hometeam, $awayteam, $teambet)
 {
 	$connection = dbConnection();
-    	$EnterBettingHistory_query = "INSERT INTO Betting_History (Username, Hometeam, Awayteam, teambet) VALUES ('$username', '$hometeam', '$awayteam', '$teambet')";
+	$betDate = date('m/d/Y h:i:s a', time());
+    	$EnterBettingHistory_query = "INSERT INTO Betting_History (Username, Hometeam, Awayteam, teambet, betDate) VALUES ('$username', '$hometeam', '$awayteam', '$teambet', '$betDate')";
     	$connection->query($EnterBettingHistory_query);
 	
 	$result = $username." has placed a bet for ".$teambet;
@@ -541,7 +542,7 @@ function AddToBettingHistory($username, $hometeam, $awayteam, $teambet)
 function ShowHistoryBets()
 {
 	$connection = dbConnection();
-    	$sql = "SELECT Username, Hometeam, Awayteam, teambet FROM Betting_History";
+    	$sql = "SELECT Username, Hometeam, Awayteam, teambet, Won_or_Loss, Betting_Score FROM Betting_History";
     	$result = $connection->query($sql);
 	
 	$all_info = [];
@@ -556,9 +557,16 @@ function ShowHistoryBets()
 			echo $awayteam;
 			$teambet = $row["teambet"];
 			echo $teambet;
+			$won_or_loss = $row["Won_or_Loss"];
+			echo $won_or_loss;
+			$bettingscore = $row["Betting_Score"];
+			echo $bettingscore;
+			$betDate = $row["betDate"];
+			echo $betDate;
+			
 
 
-            		$bethistory = array("Username"=>$username, "Hometeam"=>$hometeam, "Awayteam"=>$awayteam, "teambet"=>$teambet);
+            		$bethistory = array("Username"=>$username, "Hometeam"=>$hometeam, "Awayteam"=>$awayteam, "teambet"=>$teambet, "Won_or_Loss"=>$won_or_loss, "Betting_Score"=>$bettingscore, "betDate"=>$betDate);
             		array_push($all_info, $bethistory);
 
         }
