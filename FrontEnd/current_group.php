@@ -64,7 +64,6 @@ if (isset($_POST['Get_Rankings'])) {
   
         $response = getRankings();
 	$num = 1;
-	print_r($response);
 	foreach($response as $data) {
             
             echo "<br>";
@@ -73,7 +72,7 @@ if (isset($_POST['Get_Rankings'])) {
             echo "<br>";
 	    $num++;
             
-            break;
+            
             
         }
             
