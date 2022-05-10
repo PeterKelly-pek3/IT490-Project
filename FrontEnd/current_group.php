@@ -151,6 +151,10 @@ if (isset($_POST['TeamToBetOn'])) {
 	<button type="submit" name="TeamToBetOn">Show Betting Odds for Upcoming Match</button>
 </form>	
 
+<h7>Show Wins/Losses (Betting History)</h7>
+<form action="current_group.php" method="post">	
+	<button type="submit" name="ShowHistoryBets">Show Betting Odds for Upcoming Match</button>
+</form>	
 
 
 <body>
