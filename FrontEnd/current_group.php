@@ -103,6 +103,34 @@ if (isset($_POST['AwayTeamBet'])) {
 	
 }
 
+if (isset($_POST['ShowHistoryBets'])) {
+	
+	
+	$response = ShowHistoryBets();
+	foreach($response as $data) {
+            
+            echo "<br>";
+            $username = $data['Username'];
+            echo $username;
+            echo "<br>";
+	    $hometeam = $data['Hometeam'];
+            echo $hometeam;
+            echo "<br>";
+	    $awayteam = $data['Awayteam'];
+            echo $awayteam;
+            echo "<br>";
+	    $teambet = $data['teambet'];
+            echo $teambet;
+            echo "<br>";
+	    
+            
+            
+            
+        }
+
+	
+}
+
 if (isset($_POST['TeamToBetOn'])) {
 	
 	$odds_response = TeamToBetOn();
