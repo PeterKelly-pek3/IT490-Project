@@ -476,7 +476,7 @@ function chooseTeam($username, $teamname)
 function getRankings()
 {
     $connection = dbConnection();
-    $sql = "SELECT Name FROM HistoricalData by trimWin_rate DESC";
+    $sql = "SELECT Name FROM HistoricalData ORDER BY trimWin_rate DESC";
     $result = $connection->query($sql);
 
     $all_info = [];
