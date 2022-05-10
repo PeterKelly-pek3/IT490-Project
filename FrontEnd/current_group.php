@@ -85,7 +85,7 @@ if (isset($_POST['TeamToBetOn'])) {
 	$odds_response = TeamToBetOn();
 	print_r($odds_response);
 	foreach($odds_response as $data) {
-            if (isset($data['Home_Odds']) {
+            if (isset($data['Home_Odds'])) {
 		    
             	echo "<br>";
             	$hometeam = $data['hometeam'];
