@@ -80,6 +80,29 @@ if (isset($_POST['Get_Rankings'])) {
    
 }
 
+
+if (isset($_POST['HomeTeamBet'])) {
+	
+	$username = $_REQUEST['username'];
+	$hometeam = $_REQUEST['hometeam'];
+	$awayteam = $_REQUEST['awayteam'];
+	$teambet = $hometeam;
+	$response = AddtoBettingHistory($username, $hometeam, $awayteam, $teambet);
+	echo $response;
+	
+}
+
+if (isset($_POST['AwayTeamBet'])) {
+	
+	$username = $_REQUEST['username'];
+	$hometeam = $_REQUEST['hometeam'];
+	$awayteam = $_REQUEST['awayteam'];
+	$teambet = $awayteam;
+	$response = AddtoBettingHistory($username, $hometeam, $awayteam, $teambet);
+	echo $response;
+	
+}
+
 if (isset($_POST['TeamToBetOn'])) {
 	
 	$odds_response = TeamToBetOn();
@@ -103,9 +126,22 @@ if (isset($_POST['TeamToBetOn'])) {
 		
 		echo "<h6>Choose Your Bet For This Match</h6>";
 		echo "<form action='current_group.php' method='post'>";
-		echo	"<button type='submit' name='postBet'>".$hometeam."</button>";
-		echo "<br>";    
-		echo	"<button type='submit' name='postBet'>".$awayteam."</button>";
+		echo "<label for='username'>Enter Username:</label><br/>";
+		echo "<br>";
+		echo "<input id='username' name='username' type='text' value=''/>";
+		echo " <input type='hidden' id='hometeam' name='hometeam' value='".$hometeam."'>";
+		echo " <input type='hidden' id='awayteam' name='awayteam' value='".$awayteam."'>";
+		echo " <button type='submit' name='HomeTeamBet'>".$hometeam."</button>";
+		echo "</form>";
+		echo "<br>";  
+		echo "<form action='current_group.php' method='post'>";
+		echo "<label for='username'>Enter Username:</label><br/>";
+		echo "<br>";
+		echo "<input id='username' name='username' type='text' value=''/>";
+		echo " <input type='hidden' id='hometeam' name='hometeam' value='".$hometeam."'>";
+		echo " <input type='hidden' id='awayteam' name='awayteam' value='".$awayteam."'>";
+		echo	"<button type='submit' name='AwayTeamBet'>".$awayteam."</button>";
+		echo "</form>";
 		echo "<br>";   
             
 	    }
