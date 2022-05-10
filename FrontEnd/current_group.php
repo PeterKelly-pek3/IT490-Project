@@ -84,6 +84,25 @@ if (isset($_POST['TeamToBetOn'])) {
 	
 	$odds_response = TeamToBetOn();
 	print_r($odds_response);
+	foreach($odds_response as $data) {
+            if (isset($data['Home_Odds'])
+            	echo "<br>";
+            	$hometeam = $data['hometeam'];
+            	echo "Home Team: ".$hometeam;
+            	echo "<br>";
+	    	$awayteam = $data['awayteam'];
+            	echo "Away Team: ".$awayteam;
+            	echo "<br>";
+	    	$Home_Odds = $data['Home_Odds'];
+            	echo "Home Odds: ".$Home_Odds;
+            	echo "<br>";
+	    	$Away_Odds = $data['Away_Odds'];
+            	echo "Away Odds: ".$Away_Odds;
+            	echo "<br>";
+            
+            
+            
+        }
        
             
     
@@ -128,7 +147,7 @@ if (isset($_POST['TeamToBetOn'])) {
 	
 <h6>Show Available Upcoming Games to Bet On</h6>
 <form action="current_group.php" method="post">	
-	<button type="submit" name="TeamToBetOn">Show Rankings Based on Performance</button>
+	<button type="submit" name="TeamToBetOn">Show Betting Odds for Upcoming Match</button>
 </form>	
 
 
