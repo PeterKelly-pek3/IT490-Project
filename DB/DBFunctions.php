@@ -537,5 +537,34 @@ function AddToBettingHistory($username, $hometeam, $awayteam, $teambet)
     	return $result;
 	
 }
+
+function ShowHistoryBets()
+{
+	$connection = dbConnection();
+    	$sql = "SELECT Username, Hometeam, Awayteam, teambet FROM Betting_History";
+    	$result = $connection->query($sql);
+	
+	$all_info = [];
+	if ($result->num_rows > 0) {
+        // output data of each row
+       		while($row = $result->fetch_assoc()) {
+            		$username = $row["Username"];
+            		echo $username;
+			$hometeam = $row["Hometeam"];
+			echo $hometeam;
+			$awayteam = $row["Awayteam"];
+			echo $awayteam;
+			$teambet = $row["teambet"];
+			echo $teambet;
+
+
+            		$bethistory = array("Username"=>$username, "Hometeam"=>$hometeam, "Awayteam"=>$awayteam, "teambet"=>$teambet);
+            		array_push($all_info, $bethistory);
+
+        }
+        echo print_r($all_info);
+        return $all_info;
+    }
+}
 ?>
 
