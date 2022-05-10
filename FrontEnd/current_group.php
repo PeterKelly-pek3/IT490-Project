@@ -80,17 +80,22 @@ if (isset($_POST['Get_Rankings'])) {
    
 }
 
-
-
-
-//$odds_response = TeamToBetOn();
-
-//if (is_null($odds_response)) 
-//{
-//	echo "<h5>Choose Team to Bet On</h5>"
-//	echo $odds_response;
+if (isset($_POST['TeamToBetOn'])) {
 	
-//}
+	$odds_response = TeamToBetOn();
+	if (is_null($odds_response)) 
+	{
+		print_r($odds_response);
+	
+	}
+       
+            
+    
+   
+}
+
+
+
 
 
 ?>
@@ -124,6 +129,12 @@ if (isset($_POST['Get_Rankings'])) {
 <form action="current_group.php" method="post">	
 	<button type="submit" name="Get_Rankings">Show Rankings Based on Performance</button>
 </form>	
+	
+<h6>Show Available Upcoming Games to Bet On</h6>
+<form action="current_group.php" method="post">	
+	<button type="submit" name="TeamToBetOn">Show Rankings Based on Performance</button>
+</form>	
+
 
 
 <body>
