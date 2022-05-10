@@ -531,6 +531,7 @@ function AddToBettingHistory($username, $hometeam, $awayteam, $teambet)
 {
 	$connection = dbConnection();
 	$betDate = date('m/d/Y h:i:s a', time());
+	echo $betDate;
     	$EnterBettingHistory_query = "INSERT INTO Betting_History (Username, Hometeam, Awayteam, teambet, betDate) VALUES ('$username', '$hometeam', '$awayteam', '$teambet', '$betDate')";
     	$connection->query($EnterBettingHistory_query);
 	
