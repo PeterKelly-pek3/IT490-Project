@@ -535,7 +535,7 @@ function AddToBettingHistory($username, $hometeam, $awayteam, $teambet)
     	$EnterBettingHistory_query = "INSERT INTO Betting_History (Username, Hometeam, Awayteam, teambet, betDate) VALUES ('$username', '$hometeam', '$awayteam', '$teambet', '$betDate')";
     	$connection->query($EnterBettingHistory_query);
 	
-	$result = $username." has placed a bet for ".$teambet;
+	$result = $username." has placed a bet for ".$teambet." On ".$betDate;
     	return $result;
 	
 }
