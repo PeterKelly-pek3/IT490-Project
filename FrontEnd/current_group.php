@@ -64,6 +64,7 @@ if (isset($_POST['Get_Rankings'])) {
   
         $response = getRankings();
 	$num = 1;
+	echo $response;
 	foreach($response as $data) {
             
             echo "<br>";
