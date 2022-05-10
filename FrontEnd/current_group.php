@@ -76,7 +76,7 @@ if (isset($_POST['Get_Rankings'])) {
             
         }
             
-    }
+    
    
 }
 
