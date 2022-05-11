@@ -27,7 +27,7 @@ if (isset($_POST['create_group']))
 	$gkey = $_REQUEST['groupkey'];
 	$response = create_group($username, $gkey);
 	
-	echo("<div class='card-body'>".$response."</div>");
+	echo("<div class='card-body'><h5>".$response."</h5></div>");
 	
 	print_r($response);
 }
@@ -38,7 +38,7 @@ if (isset($_POST['groupjoin']))
 	$gkey = $_REQUEST['gkey'];
 	$response = groupjoin($username, $gkey);
 	
-	echo("<div class='card-body'>".$response."</div>");
+	echo("<div class='card-body'><h5>".$response."</h5></div>");
 	
 	print_r($response);
 }
