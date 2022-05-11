@@ -58,7 +58,7 @@ if (isset($_POST['groupjoin']))
                 <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body style="background-color: #222D32;">    
+    <body style="background-color: #bcbcbc;">    
      <!-- Nav Start here -->
       <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
         <div class="container">
