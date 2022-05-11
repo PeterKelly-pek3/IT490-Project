@@ -156,6 +156,10 @@ if (isset($_POST['TeamToBetOn'])) {
             	echo "Away Odds: ".$Away_Odds;
             	echo "<br>";
 		
+		echo "<div class='wrapper wrapper--w960' style='padding-bottom: 40px;padding-top: 10px;'>";
+		echo "<div class='card'>";
+		echo "<div class='card-heading'></div>";
+		echo "<div class='card-body'>";
 		echo "<h6>Choose Your Bet For This Match</h6>";
 		echo "<form action='current_group.php' method='post'>";
 		echo "<label for='username'>Enter Username:</label><br/>";
@@ -174,66 +178,148 @@ if (isset($_POST['TeamToBetOn'])) {
 		echo " <input type='hidden' id='awayteam' name='awayteam' value='".$awayteam."'>";
 		echo	"<button type='submit' name='AwayTeamBet'>".$awayteam."</button>";
 		echo "</form>";
-		echo "<br>";   
+		echo "<br>";
+		echo "</div>";
+		echo "</div>";
+		echo "</div>";
             
 	    }
             
         }
        
-            
-    
-   
+      
 }
 
 
-
-
-
 ?>
-
-
 <DOCTYPE! html>
-<head>
-    <title>Current Groups</title>
-</head>
-<h2>Get Your Group</h2>
-<form action="current_group.php" method="post">
-    <h3>Show Group and Players</h3>
-    <label for="username">Enter Username:</label><br/>
-    <input id="username" name="username" type="text" value=""/>
-    <p>
-        <button type="submit" name="getGroups">Recruit Group</button>
-    </p>
-</form>
-<h4>Recruit Your Esports Team</h4>
-<form action="current_group.php" method="post">
-    <h5>Show Group and Players</h5>
-    <label for="team">Enter Team Name:</label><br/>
-    <input id="team" name="team" type="text" value=""/>
-    <label for="username">Enter Username:</label><br/>
-    <input id="team" name="username" type="text" value=""/>
-    <p>
-        <button type="submit" name="chooseTeam">Choose Team</button>
-    </p>
-</form>
-<h5>Show Top Winners</h5>
+ <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Current Groups</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/dashboard/css/main.css" rel="stylesheet" media="all">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+        
+ </head>
+    <body style="background-color: #222D32;">    
+     <!-- Nav Start here -->
+      <nav class="navbar navbar-dark bg-dark navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
+        <div class="container">
+            <a class="navbar-brand mr-auto" style="width: 100%;" href="#">League of Legends Fantasy League</a>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav  ">
+                    <!-- <li class="nav-item" >
+                        <a class="nav-link " href="#"></a>
+                    </li> -->
+                    
+
+                </ul>
+                   <ul class="navbar-nav  ml-auto">
+                    <li class="nav-item" >
+                        <a class="nav-link " href="logout.php?logout='1'">Logout</a>
+                    </li>
+                </ul>
+                
+            </div>
+        </div>
+    </nav> 
+     <!-- Nav end here -->
+  
+        <!-- Group and Players Stats start here -->  
+        <div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+            <div class="card">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title" style="text-align: center;">This is the groups that are avaible</h2>
+                    <form action="current_group.php" method="post">
+                        <h3>Show Group and Players</h3>
+                        <div class="form-group">
+                        <label for="username">Enter Username:</label>
+                        <input id="username" name="username" type="text" value=""  class="form-control" >
+                        </div>
+                        <div class="p-t-30">
+                            <p><button type="submit" name="getGroups" class="btn btn--radius btn--green">Recruit Group</button></p>
+                        </div> 
+                    </form>            
+                </div>
+            </div>
+        </div>
+         <!--Group and Players Stats end here -->   
+     <!-- Group and Players 2nd start here -->  
+        <div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+            <div class="card">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title" style="text-align: center;">This is the groups that are avaible</h2>
+                    <form action="current_group.php" method="post">
+                        <h3>Show Group and Players</h3>
+                        <div class="form-group">
+                        <label for="team">Enter Team Name:</label>
+                        <input id="team" name="team" type="text" value=""  class="form-control" >
+                        </div>
+                        <div class="p-t-30">
+                            <p><button type="submit" name="chooseTeam" class="btn btn--radius btn--green">Choose Team</button></p>
+                        </div> 
+                    </form>            
+                </div>
+            </div>
+        </div>
+         <div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+            <div class="card">
+                <div class="card-heading"></div>
+                <div class="card-body">
+                    <h2 class="title" style="text-align: center;"></h2>
+                        <div class="p-t-30">
+                            <p><button type="submit" name="chooseTeam" class="btn btn--radius btn--green">Show Rankings Based on Performance</button></p>
+                        </div> 
+                    </form>            
+                </div>
+            </div>
+        </div>
+         <!--Group and Players 2nd end here -->  
+	<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+        	<div class="card">
+       			<div class="card-heading"><h2 class="title" style="text-align: center;">Show Top Winners</h2></div>
+				<div class="card-body">
+					<div class="p-t-30">
+					<form action="current_group.php" method="post">	
+						<p><button type="submit" name="Get_Rankings" class="btn btn--radius btn--green">Show Rankings Based on Performance</button></p>
+					</form>	
+				
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+        	<div class="card">					
+<div class="card-heading"><h2 class="title" style="text-align: center;">Show Available Upcoming Games to Bet On</h2></div>
+			<div class="card-body">
+					<div class="p-t-30">
 <form action="current_group.php" method="post">	
-	<button type="submit" name="Get_Rankings">Show Rankings Based on Performance</button>
+	<p><button type="submit" name="TeamToBetOn" class="btn btn--radius btn--green">Show Betting Odds for Upcoming Match</button></p>
 </form>	
-	
-<h6>Show Available Upcoming Games to Bet On</h6>
+</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+        	<div class="card">					
+<div class="card-heading"><h2 class="title" style="text-align: center;">Show Wins/Losses (Betting History)</h2></div>
+			<div class="card-body">
+					<div class="p-t-30">
 <form action="current_group.php" method="post">	
-	<button type="submit" name="TeamToBetOn">Show Betting Odds for Upcoming Match</button>
-</form>	
-
-<h7>Show Wins/Losses (Betting History)</h7>
-<form action="current_group.php" method="post">	
-	<button type="submit" name="ShowHistoryBets">Show Betting Odds for Upcoming Match</button>
-</form>	
-
-
-<body>
-
+	<p><button type="submit" name="ShowHistoryBets" class="btn btn--radius btn--green">Show Betting Odds for Upcoming Match</button></p>
+</form>	 
+	</div>
+			</div>
+		</div>
+	</div>					
+    <!-- All Js -->
+    <script type="text/javascript" src="webScripts.js">
+    </script>
 
 </body>
+
 </html>
