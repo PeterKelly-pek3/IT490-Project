@@ -269,42 +269,33 @@ if (isset($_POST['TeamToBetOn'])) {
        
          <!--Group and Players 2nd end here -->  
 	<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
-        	<div class="card">
-       			<div class="card-heading"><h2 class="title" style="text-align: center;">Show Top Winners</h2></div>
-				<div class="card-body">
-					<div class="p-t-30">
+        	
+       			<h2 class="title" style="text-align: center;">Show Top Winners</h2>
+				
 					<form action="current_group.php" method="post">	
 						<p><button type="submit" name="Get_Rankings" class="btn btn--radius btn--green">Show Rankings Based on Performance</button></p>
 					</form>	
 				
 				</div>
-			</div>
-		</div>
-	</div>
+			
 <div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
-        	<div class="card">					
-<div class="card-heading"><h2 class="title" style="text-align: center;">Show Available Upcoming Games to Bet On</h2></div>
-			<div class="card-body">
-					<div class="p-t-30">
+        						
+<h2 class="title" style="text-align: center;">Show Available Upcoming Games to Bet On</h2>
+			
 <form action="current_group.php" method="post">	
 	<p><button type="submit" name="TeamToBetOn" class="btn btn--radius btn--green">Show Betting Odds for Upcoming Match</button></p>
 </form>	
 </div>
-			</div>
-		</div>
-	</div>
+			
 	<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
-        	<div class="card">					
-<div class="card-heading"><h2 class="title" style="text-align: center;">Show Wins/Losses (Betting History)</h2></div>
-			<div class="card-body">
-					<div class="p-t-30">
+        						
+<h2 class="title" style="text-align: center;">Show Wins/Losses (Betting History)</h2>
+			
 <form action="current_group.php" method="post">	
 	<p><button type="submit" name="ShowHistoryBets" class="btn btn--radius btn--green">Show Betting Odds for Upcoming Match</button></p>
 </form>	 
 	</div>
-			</div>
-		</div>
-	</div>					
+						
     <!-- All Js -->
     <script type="text/javascript" src="webScripts.js">
     </script>
