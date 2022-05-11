@@ -131,29 +131,6 @@ if (isset($_POST['groupjoin']))
             <div class="card">
                 <div class="card-heading"></div>
                 <div class="card-body">
-
-<?php
-			if (isset($_POST['create_group']))
-{
-	$username = $_REQUEST['groupname'];
-	$gkey = $_REQUEST['groupkey'];
-	$response = create_group($username, $gkey);
-	
-	echo "<div class='card-body'><h5>".$response."</h5></div>";
-	
-	print_r($response);
-}
-if (isset($_POST['groupjoin']))
-{
-	$username = $_REQUEST['username'];
-	$gkey = $_REQUEST['gkey'];
-	$response = groupjoin($username, $gkey);
-	
-	echo "<div class='card-body'><h5>".$response."</h5></div>";
-	
-	print_r($response);
-}
-			?>
                     <h2 class="title" style="text-align: center;">Create Group</h2>
                     <form method="post" action="profile.php">
                         <div class="form-group">
