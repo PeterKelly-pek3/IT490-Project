@@ -156,10 +156,10 @@ if (isset($_POST['TeamToBetOn'])) {
             	echo "Away Odds: ".$Away_Odds;
             	echo "<br>";
 		
-		echo "<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">";
-		echo "<div class="card">";
-		echo "<div class="card-heading"></div>";
-		echo "<div class="card-body">";
+		echo "<div class='wrapper wrapper--w960' style='padding-bottom: 40px;padding-top: 10px;'>";
+		echo "<div class='card'>";
+		echo "<div class='card-heading'></div>";
+		echo "<div class='card-body'>";
 		echo "<h6>Choose Your Bet For This Match</h6>";
 		echo "<form action='current_group.php' method='post'>";
 		echo "<label for='username'>Enter Username:</label><br/>";
