@@ -272,11 +272,19 @@ if (isset($_POST['TeamToBetOn'])) {
             </div>
         </div>
          <!--Group and Players 2nd end here -->  
-       <h5>Show Top Winners</h5>
-<form action="current_group.php" method="post">	
-	<button type="submit" name="Get_Rankings">Show Rankings Based on Performance</button>
-</form>	
-	
+	<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+        	<div class="card">
+       			<div class="card-heading"><h5class="title" style="text-align: center;">Show Top Winners</h5></div>
+				<form action="current_group.php" method="post">	
+					<p><button type="submit" name="Get_Rankings" class="btn btn--radius btn--green">Show Rankings Based on Performance</button></p>
+				</form>	
+			<div class="card-body">
+				<div class="p-t-30">
+				</div>
+			</div>
+		</div>
+	</div>
+					
 <h6>Show Available Upcoming Games to Bet On</h6>
 <form action="current_group.php" method="post">	
 	<button type="submit" name="TeamToBetOn">Show Betting Odds for Upcoming Match</button>
