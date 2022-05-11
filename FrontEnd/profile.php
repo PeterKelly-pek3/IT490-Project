@@ -26,7 +26,7 @@ if (isset($_POST['create_group']))
 	$username = $_REQUEST['groupname'];
 	$gkey = $_REQUEST['groupkey'];
 	$response = create_group($username, $gkey);
-	echo($response);
+	echo'<p color: white>' . $response . '</p>';
 	print_r($response);
 }
 
@@ -35,7 +35,7 @@ if (isset($_POST['groupjoin']))
 	$username = $_REQUEST['username'];
 	$gkey = $_REQUEST['gkey'];
 	$response = groupjoin($username, $gkey);
-	echo($response);
+	echo'<p color: white>' . $response . '</p>';
 	print_r($response);
 }
 
