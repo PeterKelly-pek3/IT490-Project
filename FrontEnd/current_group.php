@@ -266,18 +266,18 @@ if (isset($_POST['TeamToBetOn'])) {
                 </div>
             </div>
         </div>
-         <div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
-            <div class="card">
-                <div class="card-heading"></div>
-                <div class="card-body">
-                    <h2 class="title" style="text-align: center;"></h2>
-                        <div class="p-t-30">
-                            <p><button type="submit" name="chooseTeam" class="btn btn--radius btn--green">Show Rankings Based on Performance</button></p>
-                        </div> 
-                    </form>            
-                </div>
-            </div>
-        </div>
+       //  <div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
+       //     <div class="card">
+       //         <div class="card-heading"></div>
+       //         <div class="card-body">
+       //             <h2 class="title" style="text-align: center;"></h2>
+       //               <div class="p-t-30">
+       //                    <p><button type="submit" name="chooseTeam" class="btn btn--radius btn--green">Show Rankings Based on Performance</button></p>
+       //                 </div> 
+       //             </form>            
+       //        </div>
+       //    </div>
+       // </div>
          <!--Group and Players 2nd end here -->  
 	<div class="wrapper wrapper--w960" style="padding-bottom: 40px;padding-top: 10px;">
         	<div class="card">
