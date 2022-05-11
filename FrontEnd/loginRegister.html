@@ -3,77 +3,119 @@
 <!doctype html>
 	<html lang="en">
 		<head>
-			<meta charset="utf-8">
-			<link rel="stylesheet" href="../css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>League of Legends Gambling for Degenerates | Login</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+   
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+		<body style="background-color:#222D32;">
 
-			<title>League of Legends Gambling for Degenerates</title>
-		</head>
-		<body>
-			<div class="main">
-				<div class = "mainheading">
-					<h1>League of Legends Fantasy League</h1>
-				</div>
-			</div>
+    <div class="container">
+        <div class="main">
+                    <h1 class="login-title">League of Legends Fantasy League</h1>
+            </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                
+                <div class="col-lg-12 login-title">
+                    LOGIN HERE
+                </div>
+             <!-- Login Start Here -->
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-control-label input-box">USER NAME</label>
+                                <input type="text" class="form-control" id="username_login"  name = "username">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">PASSWORD</label>
+                               <input type="password" class="form-control" id="password_login"  name = "password">
+                            </div>
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text"> 
+                                <div>
+                                <a href="#">Forgot your password?</a>
+                                </div>
+                                </div>
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="button" class="btn1 btn btn-outline-primary" onclick="checkLoginCredentials()" id = "loginButtonId">LOGIN</button>
+                                </div>
+                                  
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+        <!-- Login End Here-->
+ <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                
+                <div class="col-lg-12 login-title">
+                  USER  REGISTER
+                </div>
+             <!-- Register Start Here -->
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form>
+                            <!-- Firstname and Lastname -->
+                            <div class="form-group">
+                                <label class="form-control-label input-box">FIRST NAME</label>
+                                <input type="text" class="form3 form-control" name = "firstname" id = "id_firstname"  required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label input-box">LAST NAME</label>
+                               <input type="text" class="form3 form-control" name = "lastname" id = "id_lastname"  required> 
+                            </div>
+                            <!-- Username, Email and Phone -->
+                            <div class="form-group">
+                                <label class="form-control-label input-box">USER NAME</label>
+                                <input type="text" class="form3 form-control" name = "username" id = "id_username"  onblur="checkForExistingUsername()" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label input-box">EMAIL</label>
+                                <input class="form3 form-control" type = "text" name = "email" id = "id_email"  required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label input-box">PHONE</label>
+                                <input type="text" class="form-control" name = "phone" id = "id_phone" required>
+                            </div>
+                            <!-- Password and Password2 -->
+                            <div class="form-group">
+                                <label class="form-control-label">PASSWORD</label>
+                               <input class="form3 form-control" type = "password" name = "password" id = "id_password"  required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">CONFIRM PASSWORD</label>
+                                <input class="form3 form-control" type = "password" name = "conform_password" id = "id_confirm_password"  required>
+                            </div>
 
-			<!-- Login -->
-			<div class="loginheading">
-				<h3>User Login</h3>
-				<div>
-					<form>
-						<div>
-							<input type="text" class="form1" id="username_login" placeholder="Username" name = "username">
-						</div>
-						<div>
-							<input type="password" class="form2" id="password_login" placeholder="Password" name = "password">
-						</div>
-						<div>
-							<a href="#">Forgot your password?</a>
-						</div>
-						<div>
-							<button type="button" class="btn1" onclick="checkLoginCredentials()" id = "loginButtonId">Login</button>
-						</div>
-					</form>
-				</div>                
-			</div>
-              
-			<!-- Register -->
-			<div class="regheader">
-				<h3>User Registration</h3>
-				<div>
-					<form>
-                                    
-						<!-- Firstname and Lastname -->
-						<div>
-							<input type="text" class="form3" name = "firstname" id = "id_firstname" placeholder="Firstname" required>
-						</div>
-						<div>
-							<input type="text" class="form3" name = "lastname" id = "id_lastname" placeholder="Lastname" required>
-						</div>
-                                    
-						<!-- Username and Email -->
-						<div>
-							<input type="text" class="form3" name = "username" id = "id_username" placeholder="Username" onblur="checkForExistingUsername()" required>
-						</div>
-						<div>
-							<input class="form3" type = "text" name = "email" id = "id_email" placeholder="Email" required>
-						</div>
-                                   
-						<!-- Password and Password2 -->
-						<div>
-							<input class="form3" type = "password" name = "password" id = "id_password" placeholder="Password" required>
-						</div>
-						<div>
-							<input class="form3" type = "password" name = "conform_password" id = "id_confirm_password" placeholder="Confirm Password" required>
-						</div>
-                                    
-						<!-- Submit Button -->
-						<div>
-							<button type="button" class="btn2" onclick = "checkRegisterCredentials()" id = "registerButtonId">Register</button> 
-						</div>
-					
-					</form>
-				</div>
-			</div>
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text"> 
+                                </div>
+                                <!-- Submit Button -->
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="button" class="btn2 btn btn-outline-primary" onclick = "checkRegisterCredentials()" id = "registerButtonId">REGISTER</button> 
+                                </div>
+                                 
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+        <!-- Login End Here-->
+
 		<script type="text/javascript" src="webScripts.js">
 		</script>
 		</body>
