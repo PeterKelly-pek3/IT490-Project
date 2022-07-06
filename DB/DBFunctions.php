@@ -180,7 +180,7 @@ function getOdds()
 		
 		foreach($returnValue['results']['odds']['151_'.$number] as $oddsvalue) 
 		{
-			//echo "WASSUP__ SECOND LOOP\n";
+			//echo "INSIDE SECOND LOOP\n";
 			$number++;
 			$Home_Odds = $oddsvalue['home_od'];
 			echo "Type Odds Home:  ";
@@ -341,7 +341,7 @@ function groupjoin($gkey, $username){
 		else {
 	 		$joingroup_query = "INSERT INTO CreateTeams (players, code) VALUES ('$username', '$gkey')";
     	 		$result = $connection->query($joingroup_query);
-	 		echo "GOOD FUCKING JOB DUMB FUCK";
+	 		echo "INSERTED INTO CreateTeams";
 			$selectgroupname_query = "SELECT uname FROM CreateGroups WHERE code='$gkey'";
     	 		$result = $connection->query($selectgroupname_query);
 			$fetch_teamname = mysqli_fetch_assoc($result);
@@ -446,20 +446,9 @@ function getGroups($username)
 			
 			else {
 				echo "Result Player does not equal username";
-			}
-			
-			
-			
-		}
-		
-		
-		
-		
-	}
-	
-	
-	
-	
+			}		
+		}			
+	}		
 }
 
 function chooseTeam($username, $teamname)
